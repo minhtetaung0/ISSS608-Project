@@ -1,0 +1,61 @@
+---
+title: "Project Proposal"
+---
+
+## Motivation
+
+The motivation for this project arises from the remarkable rise of Sailor Shift, a global music phenomenon originating from Oceanus, and the growing cultural influence of the Oceanus Folk genre. As Oceanus transforms from a quiet fishing island into a globally recognized cultural hub, there is an urgent need to trace and understand how Sailor’s career, collaborations, and artistic evolution have contributed to the global diffusion of Oceanus Folk.
+
+Local journalist Silas Reed has compiled an extensive musical knowledge graph to trace these influences. Our project aims to support this effort by building an interactive system that enables deep exploration of Sailor’s career trajectory and the broader spread of Oceanus Folk through collaborations, stylistic borrowings, and evolving artist networks.
+
+## Objectives
+
+This project seeks to design and develop insightful visualizations and analytic tools that allow users (like Silas) to explore the musical influence network centered on Sailor Shift. Specifically, we aim to:
+
+-   ***Map Musical Influence:*** Visualize how Sailor Shift has been influenced by others and, in turn, how she has directly or indirectly influenced artists and genres.
+
+-   ***Analyze Collaborations:*** Identify key collaborators throughout Sailor’s career, both from her early band (Ivy Echoes) and her solo years, and analyze the genres and roles of those collaborators.
+
+-   ***Track Genre Evolution:*** Understand how Oceanus Folk evolved and interacted with genres like Indie Folk, Indie Pop, and Darkwave through stylized performances, lyrical themes, and musical structure.
+
+-   ***Visualize Career Milestones***: Highlight key turning points in Sailor’s career, including viral hits, genre shifts, and breakout collaborations using timeline and network-based views.
+
+-   ***Compare Artists’ Careers***: Contrast the musical journeys of Sailor’s former bandmates or contemporaries, and assess what defines a rising star in Oceanus Folk.
+
+-   ***Predict Emerging Stars***: Use influence and collaboration patterns to forecast the next potential breakout artists in the Oceanus Folk scene.
+
+## Data
+
+The project uses the official dataset from VAST Challenge 2025 [Mini-Challenge 1](https://vast-challenge.github.io/2025/MC1.html). Key features of the dataset include:
+
+-   A directed multigraph with:
+
+    -   17,412 nodes
+
+    -   37,857 edges
+
+    -   18 connected components
+
+**Node Types:**
+
+-   Person: Artists, composers, producers, lyricists
+
+-   MusicalGroup: Groups/bands like Ivy Echoes
+
+-   Song: With attributes like genre, notable charting, and release dates
+
+-   Album: Includes similar metadata as songs
+
+-   RecordLabel: Institutions that record/distribute music
+
+**Edge Types:**
+
+-   Collaboration and authorship: PerformerOf, ComposerOf, LyricistOf, ProducerOf
+
+-   Influence relationships: InStyleOf, CoverOf, DirectlySamples, LyricalReferenceTo, InterpolatesFrom
+
+-   Membership and recording: MemberOf, RecordedBy, DistributedBy
+
+-   The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
+
+The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
