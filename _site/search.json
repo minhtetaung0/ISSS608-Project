@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ISSS608-Project",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\n\nThis is to confirm and fix the commit\n\n\nDon’t need to panic.\n\n\nThis is a fixed version of the commit\n\n\nTesting"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -14,31 +7,38 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "Proposal/Proposal.Cindy.html",
-    "href": "Proposal/Proposal.Cindy.html",
-    "title": "Proposal",
-    "section": "",
-    "text": "The motivation for this project arises from the remarkable rise of Sailor Shift, a global music phenomenon originating from Oceanus, and the growing cultural influence of the Oceanus Folk genre. As Oceanus transforms from a quiet fishing island into a globally recognized cultural hub, there is an urgent need to trace and understand how Sailor’s career, collaborations, and artistic evolution have contributed to the global diffusion of Oceanus Folk.\nLocal journalist Silas Reed has compiled an extensive musical knowledge graph to trace these influences. Our project aims to support this effort by building an interactive system that enables deep exploration of Sailor’s career trajectory and the broader spread of Oceanus Folk through collaborations, stylistic borrowings, and evolving artist networks.\n\n\n\nThis project seeks to design and develop insightful visualizations and analytic tools that allow users (like Silas) to explore the musical influence network centered on Sailor Shift. Specifically, we aim to:\n\nMap Musical Influence: Visualize how Sailor Shift has been influenced by others and, in turn, how she has directly or indirectly influenced artists and genres.\nAnalyze Collaborations: Identify key collaborators throughout Sailor’s career, both from her early band (Ivy Echoes) and her solo years, and analyze the genres and roles of those collaborators.\nTrack Genre Evolution: Understand how Oceanus Folk evolved and interacted with genres like Indie Folk, Indie Pop, and Darkwave through stylized performances, lyrical themes, and musical structure.\nVisualize Career Milestones: Highlight key turning points in Sailor’s career, including viral hits, genre shifts, and breakout collaborations using timeline and network-based views.\nCompare Artists’ Careers: Contrast the musical journeys of Sailor’s former bandmates or contemporaries, and assess what defines a rising star in Oceanus Folk.\nPredict Emerging Stars: Use influence and collaboration patterns to forecast the next potential breakout artists in the Oceanus Folk scene.\n\n\n\n\nThe project uses the official dataset from VAST Challenge 2025 Mini-Challenge 1. Key features of the dataset include:\n\nA directed multigraph with:\n\n17,412 nodes\n37,857 edges\n18 connected components\n\n\nNode Types:\n\nPerson: Artists, composers, producers, lyricists\nMusicalGroup: Groups/bands like Ivy Echoes\nSong: With attributes like genre, notable charting, and release dates\nAlbum: Includes similar metadata as songs\nRecordLabel: Institutions that record/distribute music\n\nEdge Types:\n\nCollaboration and authorship: PerformerOf, ComposerOf, LyricistOf, ProducerOf\nInfluence relationships: InStyleOf, CoverOf, DirectlySamples, LyricalReferenceTo, InterpolatesFrom\nMembership and recording: MemberOf, RecordedBy, DistributedBy\nThe dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.\n\nThe dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift."
-  },
-  {
-    "objectID": "Proposal/Proposal.Cindy.html#motivation",
-    "href": "Proposal/Proposal.Cindy.html#motivation",
-    "title": "Proposal",
+    "objectID": "Project Proposal_Group 13.html",
+    "href": "Project Proposal_Group 13.html",
+    "title": "Project Proposal",
     "section": "",
     "text": "The motivation for this project arises from the remarkable rise of Sailor Shift, a global music phenomenon originating from Oceanus, and the growing cultural influence of the Oceanus Folk genre. As Oceanus transforms from a quiet fishing island into a globally recognized cultural hub, there is an urgent need to trace and understand how Sailor’s career, collaborations, and artistic evolution have contributed to the global diffusion of Oceanus Folk.\nLocal journalist Silas Reed has compiled an extensive musical knowledge graph to trace these influences. Our project aims to support this effort by building an interactive system that enables deep exploration of Sailor’s career trajectory and the broader spread of Oceanus Folk through collaborations, stylistic borrowings, and evolving artist networks."
   },
   {
-    "objectID": "Proposal/Proposal.Cindy.html#objectives",
-    "href": "Proposal/Proposal.Cindy.html#objectives",
-    "title": "Proposal",
-    "section": "",
-    "text": "This project seeks to design and develop insightful visualizations and analytic tools that allow users (like Silas) to explore the musical influence network centered on Sailor Shift. Specifically, we aim to:\n\nMap Musical Influence: Visualize how Sailor Shift has been influenced by others and, in turn, how she has directly or indirectly influenced artists and genres.\nAnalyze Collaborations: Identify key collaborators throughout Sailor’s career, both from her early band (Ivy Echoes) and her solo years, and analyze the genres and roles of those collaborators.\nTrack Genre Evolution: Understand how Oceanus Folk evolved and interacted with genres like Indie Folk, Indie Pop, and Darkwave through stylized performances, lyrical themes, and musical structure.\nVisualize Career Milestones: Highlight key turning points in Sailor’s career, including viral hits, genre shifts, and breakout collaborations using timeline and network-based views.\nCompare Artists’ Careers: Contrast the musical journeys of Sailor’s former bandmates or contemporaries, and assess what defines a rising star in Oceanus Folk.\nPredict Emerging Stars: Use influence and collaboration patterns to forecast the next potential breakout artists in the Oceanus Folk scene."
+    "objectID": "Project Proposal_Group 13.html#utility",
+    "href": "Project Proposal_Group 13.html#utility",
+    "title": "Project Proposal",
+    "section": "Utility",
+    "text": "Utility\n\ntidyverse: A collection of R packages designed for data science, offering tools for data manipulation, visualization, and analysis using a consistent syntax.\njsonlite: Provides a robust and easy-to-use framework for parsing and generating JSON data in R.\nSmartEDA: Automates exploratory data analysis (EDA) by generating summary statistics, visualizations, and variable profiling with minimal code.\nggtext: Enhances the text rendering capabilities of ggplot2.\nlubridate: Easy handling and manipulation of date/time data.\njanitor: Cleans messy column names and tabular data efficiently.\nfactoextra: Enhances visualization and interpretation of multivariate results (PCA, clustering).\nFactoMineR: Performs multivariate analysis like PCA, MCA, CA—underlying support for factoextra.\nDT: Creates interactive HTML data tables for viewing in RMarkdown or Shiny."
   },
   {
-    "objectID": "Proposal/Proposal.Cindy.html#data",
-    "href": "Proposal/Proposal.Cindy.html#data",
-    "title": "Proposal",
+    "objectID": "Project Proposal_Group 13.html#plotting",
+    "href": "Project Proposal_Group 13.html#plotting",
+    "title": "Project Proposal",
+    "section": "Plotting",
+    "text": "Plotting\n\ntidygraph: Brings tidyverse principles to graph data, enabling tidy manipulation of nodes and edges in network analysis.\nggraph: An extension of ggplot2 for visualizing graph and network structures in a customizable and aesthetically pleasing way.\nigraph: Low-level graph manipulation and analysis (e.g., neighbors, components, layout).\nplotly: Enables interactive, web-based visualizations using ggplot2 or direct plotly syntax, enhancing data exploration.\ntreemapify: Creates treemaps using the ggplot2 framework, allowing hierarchical data to be visualized with area-proportional rectangles.\nvisNetwork: Facilitates interactive network visualization using the vis.js JavaScript library, enabling dynamic manipulation and exploration of network graphs.\nRColorBrewer: An R package that provides a selection of color palettes specially designed for creating clear, visually appealing maps and graphics, particularly for categorical and sequential data.\nggfortify: Helps plot PCA and clustering results directly from prcomp and kmeans.\nfmsb: Creates radar/spider charts—used to compare rising star profiles visually."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#shiny-app",
+    "href": "Project Proposal_Group 13.html#shiny-app",
+    "title": "Project Proposal",
+    "section": "Shiny APP",
+    "text": "Shiny APP\n\nshiny: Builds interactive web applications directly from R — no JavaScript or HTML required.\nshinywidgets: Adds fancy and customizable UI elements to Shiny apps.\nshinyjs: Provides a simple way to add JavaScript-like functionality to Shiny apps — such as show/hide, enable/disable, or run JS code, without writing JavaScript."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ISSS608-Project",
     "section": "",
-    "text": "The project uses the official dataset from VAST Challenge 2025 Mini-Challenge 1. Key features of the dataset include:\n\nA directed multigraph with:\n\n17,412 nodes\n37,857 edges\n18 connected components\n\n\nNode Types:\n\nPerson: Artists, composers, producers, lyricists\nMusicalGroup: Groups/bands like Ivy Echoes\nSong: With attributes like genre, notable charting, and release dates\nAlbum: Includes similar metadata as songs\nRecordLabel: Institutions that record/distribute music\n\nEdge Types:\n\nCollaboration and authorship: PerformerOf, ComposerOf, LyricistOf, ProducerOf\nInfluence relationships: InStyleOf, CoverOf, DirectlySamples, LyricalReferenceTo, InterpolatesFrom\nMembership and recording: MemberOf, RecordedBy, DistributedBy\nThe dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.\n\nThe dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift."
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\n\nThis is to confirm and fix the commit\n\n\nDon’t need to panic.\n\n\nThis is a fixed version of the commit\n\n\nTesting"
   }
 ]

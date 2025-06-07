@@ -7,7 +7,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: "Proposal/Proposal.Cindy.html"
+      - href: "Project Proposal_Group 13.html"
         text: Proposal
       - about.qmd
 

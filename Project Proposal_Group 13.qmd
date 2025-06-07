@@ -1,0 +1,214 @@
+---
+title: "Project Proposal"
+author: "Group 13"
+date: "June 1, 2025"
+date-modified: "last-modified"
+format: 
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+editor: visual
+execute: 
+  eval: true
+  echo: true
+  warning: false
+  freeze: true
+---
+
+# Motivation
+
+The motivation for this project arises from the remarkable rise of Sailor Shift, a global music phenomenon originating from Oceanus, and the growing cultural influence of the Oceanus Folk genre. As Oceanus transforms from a quiet fishing island into a globally recognized cultural hub, there is an urgent need to trace and understand how Sailor’s career, collaborations, and artistic evolution have contributed to the global diffusion of Oceanus Folk.
+
+Local journalist Silas Reed has compiled an extensive musical knowledge graph to trace these influences. Our project aims to support this effort by building an interactive system that enables deep exploration of Sailor’s career trajectory and the broader spread of Oceanus Folk through collaborations, stylistic borrowings, and evolving artist networks.
+
+# Objectives
+
+This project seeks to design and develop insightful visualizations and analytic tools that allow users (like Silas) to explore the musical influence network centered on Sailor Shift. Specifically, we aim to:
+
+-   ***Map Musical Influence:*** Visualize how Sailor Shift has been influenced by others and, in turn, how she has directly or indirectly influenced artists and genres.
+
+-   ***Analyze Collaborations:*** Identify key collaborators throughout Sailor’s career, both from her early band (Ivy Echoes) and her solo years, and analyze the genres and roles of those collaborators.
+
+-   ***Track Genre Evolution:*** Understand how Oceanus Folk evolved and interacted with genres like Indie Folk, Indie Pop, and Darkwave through stylized performances, lyrical themes, and musical structure.
+
+-   ***Visualize Career Milestones***: Highlight key turning points in Sailor’s career, including viral hits, genre shifts, and breakout collaborations using timeline and network-based views.
+
+-   ***Compare Artists’ Careers***: Contrast the musical journeys of Sailor’s former bandmates or contemporaries, and assess what defines a rising star in Oceanus Folk.
+
+-   ***Predict Emerging Stars***: Use influence and collaboration patterns to forecast the next potential breakout artists in the Oceanus Folk scene.
+
+# Data
+
+The project uses the official dataset from VAST Challenge 2025 [Mini-Challenge 1](https://vast-challenge.github.io/2025/MC1.html). Key features of the dataset include:
+
+-   A directed multigraph with:
+
+    -   17,412 nodes
+
+    -   37,857 edges
+
+    -   18 connected components
+
+**Node Types:**
+
+-   Person: Artists, composers, producers, lyricists
+
+-   MusicalGroup: Groups/bands like Ivy Echoes
+
+-   Song: With attributes like genre, notable charting, and release dates
+
+-   Album: Includes similar metadata as songs
+
+-   RecordLabel: Institutions that record/distribute music
+
+**Edge Types:**
+
+-   Collaboration and authorship: PerformerOf, ComposerOf, LyricistOf, ProducerOf
+
+-   Influence relationships: InStyleOf, CoverOf, DirectlySamples, LyricalReferenceTo, InterpolatesFrom
+
+-   Membership and recording: MemberOf, RecordedBy, DistributedBy
+
+-   The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
+
+The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
+
+# R Packages
+
+## Utility
+
+-   **tidyverse**: A collection of R packages designed for data science, offering tools for data manipulation, visualization, and analysis using a consistent syntax.
+
+-   **jsonlite**: Provides a robust and easy-to-use framework for parsing and generating JSON data in R.
+
+-   **SmartEDA**: Automates exploratory data analysis (EDA) by generating summary statistics, visualizations, and variable profiling with minimal code.
+
+-   **ggtext**: Enhances the text rendering capabilities of ggplot2.
+
+-   **lubridate**: Easy handling and manipulation of date/time data.
+
+-   **janitor**: Cleans messy column names and tabular data efficiently.
+
+-   **factoextra**: Enhances visualization and interpretation of multivariate results (PCA, clustering).
+
+-   **FactoMineR**: Performs multivariate analysis like PCA, MCA, CA—underlying support for factoextra.
+
+-   **DT**: Creates interactive HTML data tables for viewing in RMarkdown or Shiny.
+
+## Plotting
+
+-   **tidygraph**: Brings tidyverse principles to graph data, enabling tidy manipulation of nodes and edges in network analysis.
+
+-   **ggraph**: An extension of ggplot2 for visualizing graph and network structures in a customizable and aesthetically pleasing way.
+
+-   **igraph**: Low-level graph manipulation and analysis (e.g., neighbors, components, layout).
+
+-   **plotly**: Enables interactive, web-based visualizations using ggplot2 or direct plotly syntax, enhancing data exploration.
+
+-   **treemapify**: Creates treemaps using the ggplot2 framework, allowing hierarchical data to be visualized with area-proportional rectangles.
+
+-   **visNetwork**: Facilitates interactive network visualization using the vis.js JavaScript library, enabling dynamic manipulation and exploration of network graphs.
+
+-   **RColorBrewer**: An R package that provides a selection of color palettes specially designed for creating clear, visually appealing maps and graphics, particularly for categorical and sequential data.
+
+-   **ggfortify**: Helps plot PCA and clustering results directly from prcomp and kmeans.
+
+-   **fmsb**: Creates radar/spider charts—used to compare rising star profiles visually.
+
+## Shiny APP
+
+-   **shiny**: Builds interactive web applications directly from R — no JavaScript or HTML required.
+
+-   **shinywidgets**: Adds fancy and customizable UI elements to Shiny apps.
+
+-   **shinyjs**: Provides a simple way to add JavaScript-like functionality to Shiny apps — such as show/hide, enable/disable, or run JS code, without writing JavaScript.
+
+# Project Schedule
+
+```{r}
+library(plotly)
+library(dplyr)
+library(lubridate)
+
+# Schedule
+df <- tibble::tribble(
+  ~task,                    ~start,       ~end,
+  "Exploratory data analysis", "2025-05-10", "2025-06-14",
+  "R Quarto/ Netlify",      "2025-06-01", "2025-07-06",
+  "R Shiny App",            "2025-06-01", "2025-07-06",
+  "Project Proposal",       "2025-06-01", "2025-06-07",
+  "Poster",                 "2025-06-08", "2025-06-25",
+) %>%
+
+mutate(
+    start = as.Date(start),
+    end = as.Date(end),
+    task = factor(task, levels = rev(unique(task)))  # reverse order
+  )
+
+today <- Sys.Date()
+
+# Create plotly Gantt chart with before/after split
+p <- plot_ly()
+
+for (i in 1:nrow(df)) {
+  s <- df$start[i]
+  e <- df$end[i]
+  t <- df$task[i]
+  
+  # Before today (black bar)
+  if (e >= today && s < today) {
+    p <- add_segments(
+      p,
+      x = s,
+      xend = today,
+      y = t,
+      yend = t,
+      type = "scatter",
+      mode = "lines",
+      line = list(color = "black", width = 15),
+      hoverinfo = "text",
+      text = paste0("<b>", t, "</b><br>Start: ", format(s, "%b %d"), "<br>End: ", format(e, "%b %d"))
+    )
+  }
+  
+  # After today (pink bar)
+  post_start <- max(s, today)
+  if (e > today) {
+    p <- add_segments(
+      p,
+      x = post_start,
+      xend = e,
+      y = t,
+      yend = t,
+      type = "scatter",
+      mode = "lines",
+      line = list(color = "pink", width = 15),
+      hoverinfo = "text",
+      text = paste0("<b>", t, "</b><br>Start: ", format(s, "%b %d"), "<br>End: ", format(e, "%b %d"))
+    )
+  }
+}
+
+# Add vertical line for today
+p <- layout(
+  p,
+  title = "Project Timeline",
+  xaxis = list(title = "", type = "date", tickformat = "%b %d"),
+  yaxis = list(title = "", categoryorder = "array", categoryarray = rev(df$task)),
+  showlegend = FALSE,
+  shapes = list(
+    list(
+      type = "line",
+      x0 = today,
+      x1 = today,
+      y0 = -0.5,
+      y1 = length(df$task) - 0.5,
+      line = list(color = "red", width = 2)
+    )
+  )
+)
+
+p
+```
+:::
