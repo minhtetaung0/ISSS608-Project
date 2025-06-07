@@ -73,9 +73,100 @@ The project uses the official dataset from VAST Challenge 2025 [Mini-Challenge 1
 
 The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
 
+# Methodology
+
+::: panel-tabset
+### Flowchart Diagram
+
+![](images/Proposal-Flowchart.png){fig-alt="Project Proposal Flowchart"}
+
+### Description
+
+## Data Preparation
+
+-   Extract and organize data from the provided JSON graph structure, containing nodes (e.g., artists, songs) and edges (e.g., collaborations, influences).
+
+-   Perform ID mapping to enrich relationships by joining connection IDs with their corresponding metadata (e.g., names, roles, types).
+
+-   This mapping enables clear interpretation of relationships, transforming raw IDs into meaningful context for analysis and visualization.
+
+-   Standardize categorical fields (e.g., genre labels), convert date formats, and handle missing or duplicated entries to ensure data quality.
+
+## Exploratory and Statistical Analysis
+
+-   Conduct descriptive analysis to understand the distribution of artist activity, genre presence, and collaboration trends.
+
+-   Calculate metrics such as degree, centrality, and influence to identify key figures and genre connectors.
+
+-   Profile rising stars based on factors like number of notable works, time to recognition, and involvement in Oceanus Folk.
+
+## Network Graph Analysis
+
+-   Construct ego networks to visualize Sailor Shift’s immediate and extended influence across the music network.
+
+-   Trace indirect paths of influence to explore how her style may have shaped other artists or genres over time.
+
+-   Build subgraphs to isolate and compare collaboration patterns during her band years (Ivy Echoes) and solo career.
+
+## Data Visualization
+
+-   Use visualizations such as timelines, bar charts, radar plots, and network graphs to communicate key insights.
+
+-   Highlight genre evolution, collaboration intensity, and Sailor Shift’s career milestones through visual storytelling.
+
+-   Include interactive elements where possible for deeper exploratory potential.
+
+## Interactive Shiny Application
+
+-   Develop a Shiny dashboard that integrates all key visualizations into an accessible, interactive tool.
+
+-   Allow users to explore artist influence networks, compare rising stars, filter by genre or time period, and track genre blending.
+
+-   Ensure the app supports dynamic, user-driven exploration to uncover patterns and forecast emerging Oceanus Folk artists.
+:::
+
+# Prototype
+
+## 1. Influence Network Graph
+
+This visualization displays Sailor Shift at the center of a web of artistic influence, showing both who inspired her and whom she influenced. Users can filter by time or genre to trace direct and indirect musical connections. The graph helps highlight her centrality and stylistic reach within the broader music scene.
+
+![](images/1.png){fig-alt="Influence Network Graph for Sailor Shift"}
+
+## 2. Collaboration Heatmap
+
+This heatmap reveals Sailor Shift’s collaboration intensity with various artists over time. Darker cells represent more frequent collaborations, helping users identify her core creative partners and peak collaborative periods. A dropdown menu allows sorting by frequency or collaborator role.
+
+![](images/2.png){fig-alt="Collaboration Heatmap for Sailor Shift"}
+
+## 3. Genre Evolution Timeline
+
+This chart tracks how Sailor Shift’s musical style evolved by visualizing the distribution of genres in her work over time. Stacked areas represent genres like Oceanus Folk or Indie Pop, giving a clear view of stylistic shifts, experimentation, and long-term trends in her artistic identity.
+
+![](images/3.png){fig-alt="Genre Evolution Timeline for Artists"}
+
+## 4. Career Milestone Timeline
+
+A linear timeline maps out key events in Sailor Shift’s career, such as viral hits, album launches, and notable collaborations. Each point on the timeline is interactive, offering additional context and making it easy to connect events with artistic or genre changes observed in other charts.
+
+![](images/4.png){fig-alt="Career Milestone Timeline"}
+
+## 5. Artist Comparison Dashboard
+
+This dashboard allows users to compare Sailor Shift with other artists using bar and radar charts. Metrics include collaboration count, notable works, and genre diversity. It offers a clear visual summary of how different artists’ careers align or diverge from Sailor’s trajectory.
+
+![](images/5.png){fig-alt="Artist Comparison Dashboard"}
+
+## 6. Emerging Artist Predictor
+
+This interactive scatter plot highlights artists with the potential to become the next Oceanus Folk stars. Based on influence and collaboration metrics, users can filter by genre or time range to discover rising talent who resemble Sailor Shift’s early career profile.
+
+![](images/6.png){fig-alt="Emerging Artist Predictor"}
+
 # R Packages
 
-## Utility
+::: panel-tabset
+### Utility
 
 -   **tidyverse**: A collection of R packages designed for data science, offering tools for data manipulation, visualization, and analysis using a consistent syntax.
 
@@ -95,7 +186,7 @@ The dataset enables temporal, relational, and genre-based exploration of the int
 
 -   **DT**: Creates interactive HTML data tables for viewing in RMarkdown or Shiny.
 
-## Plotting
+### Plotting
 
 -   **tidygraph**: Brings tidyverse principles to graph data, enabling tidy manipulation of nodes and edges in network analysis.
 
@@ -115,13 +206,14 @@ The dataset enables temporal, relational, and genre-based exploration of the int
 
 -   **fmsb**: Creates radar/spider charts—used to compare rising star profiles visually.
 
-## Shiny APP
+### Shiny APP
 
 -   **shiny**: Builds interactive web applications directly from R — no JavaScript or HTML required.
 
 -   **shinywidgets**: Adds fancy and customizable UI elements to Shiny apps.
 
 -   **shinyjs**: Provides a simple way to add JavaScript-like functionality to Shiny apps — such as show/hide, enable/disable, or run JS code, without writing JavaScript.
+:::
 
 # Project Schedule
 
@@ -211,4 +303,3 @@ p <- layout(
 
 p
 ```
-:::

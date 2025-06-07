@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "Project Proposal_Group 13.html",
     "href": "Project Proposal_Group 13.html",
     "title": "Project Proposal",
@@ -14,25 +7,88 @@
     "text": "The motivation for this project arises from the remarkable rise of Sailor Shift, a global music phenomenon originating from Oceanus, and the growing cultural influence of the Oceanus Folk genre. As Oceanus transforms from a quiet fishing island into a globally recognized cultural hub, there is an urgent need to trace and understand how Sailor’s career, collaborations, and artistic evolution have contributed to the global diffusion of Oceanus Folk.\nLocal journalist Silas Reed has compiled an extensive musical knowledge graph to trace these influences. Our project aims to support this effort by building an interactive system that enables deep exploration of Sailor’s career trajectory and the broader spread of Oceanus Folk through collaborations, stylistic borrowings, and evolving artist networks."
   },
   {
-    "objectID": "Project Proposal_Group 13.html#utility",
-    "href": "Project Proposal_Group 13.html#utility",
+    "objectID": "Project Proposal_Group 13.html#data-preparation",
+    "href": "Project Proposal_Group 13.html#data-preparation",
     "title": "Project Proposal",
-    "section": "Utility",
-    "text": "Utility\n\ntidyverse: A collection of R packages designed for data science, offering tools for data manipulation, visualization, and analysis using a consistent syntax.\njsonlite: Provides a robust and easy-to-use framework for parsing and generating JSON data in R.\nSmartEDA: Automates exploratory data analysis (EDA) by generating summary statistics, visualizations, and variable profiling with minimal code.\nggtext: Enhances the text rendering capabilities of ggplot2.\nlubridate: Easy handling and manipulation of date/time data.\njanitor: Cleans messy column names and tabular data efficiently.\nfactoextra: Enhances visualization and interpretation of multivariate results (PCA, clustering).\nFactoMineR: Performs multivariate analysis like PCA, MCA, CA—underlying support for factoextra.\nDT: Creates interactive HTML data tables for viewing in RMarkdown or Shiny."
+    "section": "Data Preparation",
+    "text": "Data Preparation\n\nExtract and organize data from the provided JSON graph structure, containing nodes (e.g., artists, songs) and edges (e.g., collaborations, influences).\nPerform ID mapping to enrich relationships by joining connection IDs with their corresponding metadata (e.g., names, roles, types).\nThis mapping enables clear interpretation of relationships, transforming raw IDs into meaningful context for analysis and visualization.\nStandardize categorical fields (e.g., genre labels), convert date formats, and handle missing or duplicated entries to ensure data quality."
   },
   {
-    "objectID": "Project Proposal_Group 13.html#plotting",
-    "href": "Project Proposal_Group 13.html#plotting",
+    "objectID": "Project Proposal_Group 13.html#exploratory-and-statistical-analysis",
+    "href": "Project Proposal_Group 13.html#exploratory-and-statistical-analysis",
     "title": "Project Proposal",
-    "section": "Plotting",
-    "text": "Plotting\n\ntidygraph: Brings tidyverse principles to graph data, enabling tidy manipulation of nodes and edges in network analysis.\nggraph: An extension of ggplot2 for visualizing graph and network structures in a customizable and aesthetically pleasing way.\nigraph: Low-level graph manipulation and analysis (e.g., neighbors, components, layout).\nplotly: Enables interactive, web-based visualizations using ggplot2 or direct plotly syntax, enhancing data exploration.\ntreemapify: Creates treemaps using the ggplot2 framework, allowing hierarchical data to be visualized with area-proportional rectangles.\nvisNetwork: Facilitates interactive network visualization using the vis.js JavaScript library, enabling dynamic manipulation and exploration of network graphs.\nRColorBrewer: An R package that provides a selection of color palettes specially designed for creating clear, visually appealing maps and graphics, particularly for categorical and sequential data.\nggfortify: Helps plot PCA and clustering results directly from prcomp and kmeans.\nfmsb: Creates radar/spider charts—used to compare rising star profiles visually."
+    "section": "Exploratory and Statistical Analysis",
+    "text": "Exploratory and Statistical Analysis\n\nConduct descriptive analysis to understand the distribution of artist activity, genre presence, and collaboration trends.\nCalculate metrics such as degree, centrality, and influence to identify key figures and genre connectors.\nProfile rising stars based on factors like number of notable works, time to recognition, and involvement in Oceanus Folk."
   },
   {
-    "objectID": "Project Proposal_Group 13.html#shiny-app",
-    "href": "Project Proposal_Group 13.html#shiny-app",
+    "objectID": "Project Proposal_Group 13.html#network-graph-analysis",
+    "href": "Project Proposal_Group 13.html#network-graph-analysis",
     "title": "Project Proposal",
-    "section": "Shiny APP",
-    "text": "Shiny APP\n\nshiny: Builds interactive web applications directly from R — no JavaScript or HTML required.\nshinywidgets: Adds fancy and customizable UI elements to Shiny apps.\nshinyjs: Provides a simple way to add JavaScript-like functionality to Shiny apps — such as show/hide, enable/disable, or run JS code, without writing JavaScript."
+    "section": "Network Graph Analysis",
+    "text": "Network Graph Analysis\n\nConstruct ego networks to visualize Sailor Shift’s immediate and extended influence across the music network.\nTrace indirect paths of influence to explore how her style may have shaped other artists or genres over time.\nBuild subgraphs to isolate and compare collaboration patterns during her band years (Ivy Echoes) and solo career."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#data-visualization",
+    "href": "Project Proposal_Group 13.html#data-visualization",
+    "title": "Project Proposal",
+    "section": "Data Visualization",
+    "text": "Data Visualization\n\nUse visualizations such as timelines, bar charts, radar plots, and network graphs to communicate key insights.\nHighlight genre evolution, collaboration intensity, and Sailor Shift’s career milestones through visual storytelling.\nInclude interactive elements where possible for deeper exploratory potential."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#interactive-shiny-application",
+    "href": "Project Proposal_Group 13.html#interactive-shiny-application",
+    "title": "Project Proposal",
+    "section": "Interactive Shiny Application",
+    "text": "Interactive Shiny Application\n\nDevelop a Shiny dashboard that integrates all key visualizations into an accessible, interactive tool.\nAllow users to explore artist influence networks, compare rising stars, filter by genre or time period, and track genre blending.\nEnsure the app supports dynamic, user-driven exploration to uncover patterns and forecast emerging Oceanus Folk artists."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#influence-network-graph",
+    "href": "Project Proposal_Group 13.html#influence-network-graph",
+    "title": "Project Proposal",
+    "section": "1. Influence Network Graph",
+    "text": "1. Influence Network Graph\nThis visualization displays Sailor Shift at the center of a web of artistic influence, showing both who inspired her and whom she influenced. Users can filter by time or genre to trace direct and indirect musical connections. The graph helps highlight her centrality and stylistic reach within the broader music scene."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#collaboration-heatmap",
+    "href": "Project Proposal_Group 13.html#collaboration-heatmap",
+    "title": "Project Proposal",
+    "section": "2. Collaboration Heatmap",
+    "text": "2. Collaboration Heatmap\nThis heatmap reveals Sailor Shift’s collaboration intensity with various artists over time. Darker cells represent more frequent collaborations, helping users identify her core creative partners and peak collaborative periods. A dropdown menu allows sorting by frequency or collaborator role."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#genre-evolution-timeline",
+    "href": "Project Proposal_Group 13.html#genre-evolution-timeline",
+    "title": "Project Proposal",
+    "section": "3. Genre Evolution Timeline",
+    "text": "3. Genre Evolution Timeline\nThis chart tracks how Sailor Shift’s musical style evolved by visualizing the distribution of genres in her work over time. Stacked areas represent genres like Oceanus Folk or Indie Pop, giving a clear view of stylistic shifts, experimentation, and long-term trends in her artistic identity."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#career-milestone-timeline",
+    "href": "Project Proposal_Group 13.html#career-milestone-timeline",
+    "title": "Project Proposal",
+    "section": "4. Career Milestone Timeline",
+    "text": "4. Career Milestone Timeline\nA linear timeline maps out key events in Sailor Shift’s career, such as viral hits, album launches, and notable collaborations. Each point on the timeline is interactive, offering additional context and making it easy to connect events with artistic or genre changes observed in other charts."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#artist-comparison-dashboard",
+    "href": "Project Proposal_Group 13.html#artist-comparison-dashboard",
+    "title": "Project Proposal",
+    "section": "5. Artist Comparison Dashboard",
+    "text": "5. Artist Comparison Dashboard\nThis dashboard allows users to compare Sailor Shift with other artists using bar and radar charts. Metrics include collaboration count, notable works, and genre diversity. It offers a clear visual summary of how different artists’ careers align or diverge from Sailor’s trajectory."
+  },
+  {
+    "objectID": "Project Proposal_Group 13.html#emerging-artist-predictor",
+    "href": "Project Proposal_Group 13.html#emerging-artist-predictor",
+    "title": "Project Proposal",
+    "section": "6. Emerging Artist Predictor",
+    "text": "6. Emerging Artist Predictor\nThis interactive scatter plot highlights artists with the potential to become the next Oceanus Folk stars. Based on influence and collaboration metrics, users can filter by genre or time range to discover rising talent who resemble Sailor Shift’s early career profile."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "index.html",

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,14 +103,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
 <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
 <script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+
 <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+
 <link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
 <script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
 <link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
 <script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -164,7 +173,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#prototype" id="toc-prototype" class="nav-link" data-scroll-target="#prototype">Prototype</a>
+  <ul class="collapse">
+  <li><a href="#influence-network-graph" id="toc-influence-network-graph" class="nav-link" data-scroll-target="#influence-network-graph">1. Influence Network Graph</a></li>
+  <li><a href="#collaboration-heatmap" id="toc-collaboration-heatmap" class="nav-link" data-scroll-target="#collaboration-heatmap">2. Collaboration Heatmap</a></li>
+  <li><a href="#genre-evolution-timeline" id="toc-genre-evolution-timeline" class="nav-link" data-scroll-target="#genre-evolution-timeline">3. Genre Evolution Timeline</a></li>
+  <li><a href="#career-milestone-timeline" id="toc-career-milestone-timeline" class="nav-link" data-scroll-target="#career-milestone-timeline">4. Career Milestone Timeline</a></li>
+  <li><a href="#artist-comparison-dashboard" id="toc-artist-comparison-dashboard" class="nav-link" data-scroll-target="#artist-comparison-dashboard">5. Artist Comparison Dashboard</a></li>
+  <li><a href="#emerging-artist-predictor" id="toc-emerging-artist-predictor" class="nav-link" data-scroll-target="#emerging-artist-predictor">6. Emerging Artist Predictor</a></li>
+  </ul></li>
   <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R Packages</a></li>
+  <li><a href="#project-schedule" id="toc-project-schedule" class="nav-link" data-scroll-target="#project-schedule">Project Schedule</a></li>
   </ul>
 </nav>
     </div>
@@ -253,11 +273,99 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.</p>
 </section>
+<section id="methodology" class="level1">
+<h1>Methodology</h1>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Flowchart Diagram</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Description</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><img src="images/Proposal-Flowchart.png" class="img-fluid" alt="Project Proposal Flowchart"></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<ul>
+<li><p>Extract and organize data from the provided JSON graph structure, containing nodes (e.g., artists, songs) and edges (e.g., collaborations, influences).</p></li>
+<li><p>Perform ID mapping to enrich relationships by joining connection IDs with their corresponding metadata (e.g., names, roles, types).</p></li>
+<li><p>This mapping enables clear interpretation of relationships, transforming raw IDs into meaningful context for analysis and visualization.</p></li>
+<li><p>Standardize categorical fields (e.g., genre labels), convert date formats, and handle missing or duplicated entries to ensure data quality.</p></li>
+</ul>
+</section>
+<section id="exploratory-and-statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-and-statistical-analysis">Exploratory and Statistical Analysis</h2>
+<ul>
+<li><p>Conduct descriptive analysis to understand the distribution of artist activity, genre presence, and collaboration trends.</p></li>
+<li><p>Calculate metrics such as degree, centrality, and influence to identify key figures and genre connectors.</p></li>
+<li><p>Profile rising stars based on factors like number of notable works, time to recognition, and involvement in Oceanus Folk.</p></li>
+</ul>
+</section>
+<section id="network-graph-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="network-graph-analysis">Network Graph Analysis</h2>
+<ul>
+<li><p>Construct ego networks to visualize Sailor Shift’s immediate and extended influence across the music network.</p></li>
+<li><p>Trace indirect paths of influence to explore how her style may have shaped other artists or genres over time.</p></li>
+<li><p>Build subgraphs to isolate and compare collaboration patterns during her band years (Ivy Echoes) and solo career.</p></li>
+</ul>
+</section>
+<section id="data-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
+<ul>
+<li><p>Use visualizations such as timelines, bar charts, radar plots, and network graphs to communicate key insights.</p></li>
+<li><p>Highlight genre evolution, collaboration intensity, and Sailor Shift’s career milestones through visual storytelling.</p></li>
+<li><p>Include interactive elements where possible for deeper exploratory potential.</p></li>
+</ul>
+</section>
+<section id="interactive-shiny-application" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-shiny-application">Interactive Shiny Application</h2>
+<ul>
+<li><p>Develop a Shiny dashboard that integrates all key visualizations into an accessible, interactive tool.</p></li>
+<li><p>Allow users to explore artist influence networks, compare rising stars, filter by genre or time period, and track genre blending.</p></li>
+<li><p>Ensure the app supports dynamic, user-driven exploration to uncover patterns and forecast emerging Oceanus Folk artists.</p></li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="prototype" class="level1">
+<h1>Prototype</h1>
+<section id="influence-network-graph" class="level2">
+<h2 class="anchored" data-anchor-id="influence-network-graph">1. Influence Network Graph</h2>
+<p>This visualization displays Sailor Shift at the center of a web of artistic influence, showing both who inspired her and whom she influenced. Users can filter by time or genre to trace direct and indirect musical connections. The graph helps highlight her centrality and stylistic reach within the broader music scene.</p>
+<p><img src="images/1.png" class="img-fluid" alt="Influence Network Graph for Sailor Shift"></p>
+</section>
+<section id="collaboration-heatmap" class="level2">
+<h2 class="anchored" data-anchor-id="collaboration-heatmap">2. Collaboration Heatmap</h2>
+<p>This heatmap reveals Sailor Shift’s collaboration intensity with various artists over time. Darker cells represent more frequent collaborations, helping users identify her core creative partners and peak collaborative periods. A dropdown menu allows sorting by frequency or collaborator role.</p>
+<p><img src="images/2.png" class="img-fluid" alt="Collaboration Heatmap for Sailor Shift"></p>
+</section>
+<section id="genre-evolution-timeline" class="level2">
+<h2 class="anchored" data-anchor-id="genre-evolution-timeline">3. Genre Evolution Timeline</h2>
+<p>This chart tracks how Sailor Shift’s musical style evolved by visualizing the distribution of genres in her work over time. Stacked areas represent genres like Oceanus Folk or Indie Pop, giving a clear view of stylistic shifts, experimentation, and long-term trends in her artistic identity.</p>
+<p><img src="images/3.png" class="img-fluid" alt="Genre Evolution Timeline for Artists"></p>
+</section>
+<section id="career-milestone-timeline" class="level2">
+<h2 class="anchored" data-anchor-id="career-milestone-timeline">4. Career Milestone Timeline</h2>
+<p>A linear timeline maps out key events in Sailor Shift’s career, such as viral hits, album launches, and notable collaborations. Each point on the timeline is interactive, offering additional context and making it easy to connect events with artistic or genre changes observed in other charts.</p>
+<p><img src="images/4.png" class="img-fluid" alt="Career Milestone Timeline"></p>
+</section>
+<section id="artist-comparison-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="artist-comparison-dashboard">5. Artist Comparison Dashboard</h2>
+<p>This dashboard allows users to compare Sailor Shift with other artists using bar and radar charts. Metrics include collaboration count, notable works, and genre diversity. It offers a clear visual summary of how different artists’ careers align or diverge from Sailor’s trajectory.</p>
+<p><img src="images/5.png" class="img-fluid" alt="Artist Comparison Dashboard"></p>
+</section>
+<section id="emerging-artist-predictor" class="level2">
+<h2 class="anchored" data-anchor-id="emerging-artist-predictor">6. Emerging Artist Predictor</h2>
+<p>This interactive scatter plot highlights artists with the potential to become the next Oceanus Folk stars. Based on influence and collaboration metrics, users can filter by genre or time range to discover rising talent who resemble Sailor Shift’s early career profile.</p>
+<p><img src="images/6.png" class="img-fluid" alt="Emerging Artist Predictor"></p>
+</section>
+</section>
 <section id="r-packages" class="level1">
 <h1>R Packages</h1>
-<div class="tabset">
-<section id="utility" class="level2">
-<h2 class="anchored" data-anchor-id="utility">Utility</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Utility</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Plotting</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Shiny APP</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <ul>
 <li><p><strong>tidyverse</strong>: A collection of R packages designed for data science, offering tools for data manipulation, visualization, and analysis using a consistent syntax.</p></li>
 <li><p><strong>jsonlite</strong>: Provides a robust and easy-to-use framework for parsing and generating JSON data in R.</p></li>
@@ -269,9 +377,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>FactoMineR</strong>: Performs multivariate analysis like PCA, MCA, CA—underlying support for factoextra.</p></li>
 <li><p><strong>DT</strong>: Creates interactive HTML data tables for viewing in RMarkdown or Shiny.</p></li>
 </ul>
-</section>
-<section id="plotting" class="level2">
-<h2 class="anchored" data-anchor-id="plotting">Plotting</h2>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <ul>
 <li><p><strong>tidygraph</strong>: Brings tidyverse principles to graph data, enabling tidy manipulation of nodes and edges in network analysis.</p></li>
 <li><p><strong>ggraph</strong>: An extension of ggplot2 for visualizing graph and network structures in a customizable and aesthetically pleasing way.</p></li>
@@ -283,14 +390,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>ggfortify</strong>: Helps plot PCA and clustering results directly from prcomp and kmeans.</p></li>
 <li><p><strong>fmsb</strong>: Creates radar/spider charts—used to compare rising star profiles visually.</p></li>
 </ul>
-</section>
-<section id="shiny-app" class="level2">
-<h2 class="anchored" data-anchor-id="shiny-app">Shiny APP</h2>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <ul>
 <li><p><strong>shiny</strong>: Builds interactive web applications directly from R — no JavaScript or HTML required.</p></li>
 <li><p><strong>shinywidgets</strong>: Adds fancy and customizable UI elements to Shiny apps.</p></li>
 <li><p><strong>shinyjs</strong>: Provides a simple way to add JavaScript-like functionality to Shiny apps — such as show/hide, enable/disable, or run JS code, without writing JavaScript.</p></li>
 </ul>
+</div>
+</div>
+</div>
 </section>
 <section id="project-schedule" class="level1">
 <h1>Project Schedule</h1>
@@ -383,11 +492,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-ad0ad1e90c2b06555a7d" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-ad0ad1e90c2b06555a7d">{"x":{"visdat":{"107d55ec0b19":["function () ","plotlyVisDat"]},"cur_data":"107d55ec0b19","attrs":{"107d55ec0b19":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-05-10","y":"Exploratory data analysis","xend":"2025-06-07","yend":"Exploratory data analysis","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","inherit":true},"107d55ec0b19.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-07","y":"Exploratory data analysis","xend":"2025-06-14","yend":"Exploratory data analysis","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","inherit":true},"107d55ec0b19.2":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Quarto/ Netlify","xend":"2025-06-07","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"107d55ec0b19.3":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-07","y":"R Quarto/ Netlify","xend":"2025-07-06","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"107d55ec0b19.4":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Shiny App","xend":"2025-06-07","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"107d55ec0b19.5":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-07","y":"R Shiny App","xend":"2025-07-06","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"107d55ec0b19.6":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"Project Proposal","xend":"2025-06-07","yend":"Project Proposal","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>Project Proposal<\/b><br>Start: Jun 01<br>End: Jun 07","inherit":true},"107d55ec0b19.7":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-08","y":"Poster","xend":"2025-06-25","yend":"Poster","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Project Timeline","xaxis":{"domain":[0,1],"automargin":true,"title":"","type":"date","tickformat":"%b %d"},"yaxis":{"domain":[0,1],"automargin":true,"title":"","categoryorder":"array","categoryarray":["Poster","Project Proposal","R Shiny App","R Quarto/ Netlify","Exploratory data analysis"],"type":"category"},"showlegend":false,"shapes":[{"type":"line","x0":"2025-06-07","x1":"2025-06-07","y0":-0.5,"y1":4.5,"line":{"color":"red","width":2}}],"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["2025-05-10","2025-06-07"],"y":["Exploratory data analysis","Exploratory data analysis"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-07","2025-06-14"],"y":["Exploratory data analysis","Exploratory data analysis"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-07"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-07","2025-07-06"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-07"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-07","2025-07-06"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-07"],"y":["Project Proposal","Project Proposal"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>Project Proposal<\/b><br>Start: Jun 01<br>End: Jun 07","<b>Project Proposal<\/b><br>Start: Jun 01<br>End: Jun 07"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-08","2025-06-25"],"y":["Poster","Poster"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-b2b54d9acbaa0e2f7ded" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b2b54d9acbaa0e2f7ded">{"x":{"visdat":{"a6cc1bb95fb8":["function () ","plotlyVisDat"]},"cur_data":"a6cc1bb95fb8","attrs":{"a6cc1bb95fb8":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-05-10","y":"Exploratory data analysis","xend":"2025-06-07","yend":"Exploratory data analysis","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","inherit":true},"a6cc1bb95fb8.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-07","y":"Exploratory data analysis","xend":"2025-06-14","yend":"Exploratory data analysis","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","inherit":true},"a6cc1bb95fb8.2":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Quarto/ Netlify","xend":"2025-06-07","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"a6cc1bb95fb8.3":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-07","y":"R Quarto/ Netlify","xend":"2025-07-06","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"a6cc1bb95fb8.4":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Shiny App","xend":"2025-06-07","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"a6cc1bb95fb8.5":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-07","y":"R Shiny App","xend":"2025-07-06","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"a6cc1bb95fb8.6":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"Project Proposal","xend":"2025-06-07","yend":"Project Proposal","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>Project Proposal<\/b><br>Start: Jun 01<br>End: Jun 07","inherit":true},"a6cc1bb95fb8.7":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-08","y":"Poster","xend":"2025-06-25","yend":"Poster","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Project Timeline","xaxis":{"domain":[0,1],"automargin":true,"title":"","type":"date","tickformat":"%b %d"},"yaxis":{"domain":[0,1],"automargin":true,"title":"","categoryorder":"array","categoryarray":["Poster","Project Proposal","R Shiny App","R Quarto/ Netlify","Exploratory data analysis"],"type":"category"},"showlegend":false,"shapes":[{"type":"line","x0":"2025-06-07","x1":"2025-06-07","y0":-0.5,"y1":4.5,"line":{"color":"red","width":2}}],"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["2025-05-10","2025-06-07"],"y":["Exploratory data analysis","Exploratory data analysis"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-07","2025-06-14"],"y":["Exploratory data analysis","Exploratory data analysis"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14","<b>Exploratory data analysis<\/b><br>Start: May 10<br>End: Jun 14"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-07"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-07","2025-07-06"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-07"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-07","2025-07-06"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-07"],"y":["Project Proposal","Project Proposal"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>Project Proposal<\/b><br>Start: Jun 01<br>End: Jun 07","<b>Project Proposal<\/b><br>Start: Jun 01<br>End: Jun 07"],"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-08","2025-06-25"],"y":["Poster","Poster"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25"],"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
-</div>
-</section>
 </div>
 
 
@@ -476,8 +583,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -588,7 +693,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
