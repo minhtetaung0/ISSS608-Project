@@ -43,35 +43,35 @@ The project uses the official dataset from VAST Challenge 2025 [Mini-Challenge 1
 
 -   A directed multigraph with:
 
-    -   17,412 nodes
+    -   *17,412 nodes*
 
-    -   37,857 edges
+    -   *37,857 edges*
 
-    -   18 connected components
+    -   *18 connected components*
 
-**Node Types:**
+::: panel-tabset
+### Node Types:
 
--   Person: Artists, composers, producers, lyricists
+-   ***Person:*** Artists, composers, producers, lyricists
 
--   MusicalGroup: Groups/bands like Ivy Echoes
+-   ***MusicalGroup:*** Groups/bands like Ivy Echoes
 
--   Song: With attributes like genre, notable charting, and release dates
+-   ***Song:*** With attributes like genre, notable charting, and release dates
 
--   Album: Includes similar metadata as songs
+-   ***Album:*** Includes similar metadata as songs
 
--   RecordLabel: Institutions that record/distribute music
+-   ***RecordLabel:*** Institutions that record/distribute music
 
-**Edge Types:**
+### Edge Types:
 
--   Collaboration and authorship: PerformerOf, ComposerOf, LyricistOf, ProducerOf
+-   ***Collaboration and authorship:*** PerformerOf, ComposerOf, LyricistOf, ProducerOf
 
--   Influence relationships: InStyleOf, CoverOf, DirectlySamples, LyricalReferenceTo, InterpolatesFrom
+-   ***Influence relationships:*** InStyleOf, CoverOf, DirectlySamples, LyricalReferenceTo, InterpolatesFrom
 
--   Membership and recording: MemberOf, RecordedBy, DistributedBy
-
--   The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
-
+-   ***Membership and recording:*** MemberOf, RecordedBy, DistributedBy
+:::
 The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
+
 
 # Methodology
 

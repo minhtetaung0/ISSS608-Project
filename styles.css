@@ -1,1 +1,60 @@
 /* css styles */
+/* css styles */
+
+/* Background only for index.qmd */
+body.index-background {
+  background-image: url("./images/index.bckgrnd.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+
+/* Make body background creamy */
+body {
+  background-color: #FFF7F3;
+  font-family: "Georgia", serif;
+}
+
+/* Set navbar color */
+.navbar {
+  background-color: #C599B6 !important; 
+  border-bottom: 1px solid #ddd;
+}
+
+/* Navbar text (brand) */
+.navbar .navbar-brand {
+  @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+  font-family: 'Edu NSW ACT Foundation', cursive;  
+  font-size: 2rem; /* increase size */
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3A0519 !important;
+}  
+
+/* Navbar text (link) */
+.navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #3A0519 !important;  /* Dark purple or your choice */
+}
+
+
+/* Optional: Make code chunks match better */
+pre, code {
+  background-color: #FFF7F3 !important;
+}
+
+/* Optional: Slightly round callouts and remove border if too stark */
+.callout {
+  background-color: #EAEFEF;
+  border-left: 4px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+/* Optional: Adjust heading contrast */
+h1, h2, h3, h4 {
+  color: #333446;
+}

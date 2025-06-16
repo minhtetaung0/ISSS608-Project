@@ -1,19 +1,18 @@
 ---
-title: "ISSS608-Project"
+title: ""
+format: 
+  html: 
+    toc: false
+    sidebar: false
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+<style>
+  body{
+  background-image: url("images/index.bckgrnd.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-```{r}
-1 + 1
-```
+</style>
 
-### This is to confirm and fix the commit
-
-### Don't need to panic.
-
-### This is a fixed version of the commit
-
-### Testing

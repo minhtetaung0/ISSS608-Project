@@ -93,8 +93,22 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "ISSS608-Project",
+    "title": "🎶Folk Flow",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\n\nThis is to confirm and fix the commit\n\n\nDon’t need to panic.\n\n\nThis is a fixed version of the commit\n\n\nTesting"
+    "text": "image in process"
+  },
+  {
+    "objectID": "index.html#meet-the-ensemble-folk-flow",
+    "href": "index.html#meet-the-ensemble-folk-flow",
+    "title": "Folk Flow Project",
+    "section": "",
+    "text": "Every great performance begins with harmony.\nFrom three distinct notes came a single chord — and so began our journey through data, rhythm, and discovery.\n\n\n Huang Zi Han\n\n\n Min Tet Aung\n\n\n Ta Nguyen Thao Nguyen\n\n\nWelcome to Folk Flow — where charts hum, graphs groove, and every dataset sings a story.\nWe’re a trio of aspiring visual storytellers from ISSS608: Visual Analytics and Applications, part of the Master of IT in Business programme at Singapore Management University.\nWith a shared love for clarity, rhythm, and design, we compose data narratives that capture not just patterns — but the pulse behind them.\nFrom notes to networks, from melody to meaning — we invite you to explore how visual analytics can turn information into inspiration."
+  },
+  {
+    "objectID": "team_intro.html",
+    "href": "team_intro.html",
+    "title": "🎵 Meet the Ensemble: Folk Flow",
+    "section": "",
+    "text": "Every great performance begins with harmony.\nFrom three distinct notes came a single chord — and so began our journey through data, rhythm, and discovery.\n\n\n Huang Zi Han\n\n\n Min Tet Aung\n\n\n Ta Nguyen Thao Nguyen\n\n\nWelcome to Folk Flow — where charts hum, graphs groove, and every dataset sings a story.\nWe’re a trio of aspiring visual storytellers from ISSS608: Visual Analytics and Applications, part of the Master of IT in Business programme at Singapore Management University.\nWith a shared love for clarity, rhythm, and design, we compose data narratives that capture not just patterns — but the pulse behind them.\nFrom notes to networks, from melody to meaning — we invite you to explore how visual analytics can turn information into inspiration."
   }
 ]

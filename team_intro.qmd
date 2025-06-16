@@ -1,0 +1,28 @@
+---
+title: "🎵 Meet the Ensemble: Folk Flow"
+---
+
+**Every great performance begins with harmony.**\
+From three distinct notes came a single chord — and so began our journey through data, rhythm, and discovery.
+
+:::::: {style="display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; margin-bottom: 2rem;"}
+::: {style="text-align: center;"}
+<img src="images/zihan.png" alt="Zi Han" style="width:120px; border-radius:50%; border:1px dotted #aaa;"/><br> <strong>Huang Zi Han</strong>
+:::
+
+::: {style="text-align: center;"}
+<img src="images/min.png" alt="Min Tet Aung" style="width:120px; border-radius:50%; border:1px dotted #aaa;"/><br> <strong>Min Tet Aung</strong>
+:::
+
+::: {style="text-align: center;"}
+<img src="images/cindy.png" alt="Ta Nguyen Thao Nguyen" style="width:120px; border-radius:50%; border:1px dotted #aaa;"/><br> <strong>Ta Nguyen Thao Nguyen</strong>
+:::
+::::::
+
+Welcome to **Folk Flow** — where charts hum, graphs groove, and every dataset sings a story.\
+We're a trio of aspiring visual storytellers from **ISSS608: Visual Analytics and Applications**, part of the Master of IT in Business programme at **Singapore Management University**.
+
+With a shared love for clarity, rhythm, and design, we compose data narratives that capture not just patterns — but the pulse behind them.
+
+From notes to networks, from melody to meaning — we invite you to explore how visual analytics can turn information into inspiration.
+

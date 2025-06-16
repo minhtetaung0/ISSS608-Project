@@ -2,14 +2,26 @@ project:
   type: website
 
 website:
-  title: "ISSS608-Project"
+  title: "🎶Folk Flow"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - href: team_intro.qmd
+        text: Team
       - href: "Project Proposal_Group 13.html"
-        text: Proposal
-      - about.qmd
+        text: Introduction
+      - text: Discovery
+        menu: 
+        - text: Data Wrangling
+          href: data_wrangling.qmd
+      - text: Shiny App
+        menu: 
+        - text: User Guide 
+          href: user_guide.pdf
+        - text: ShinyApp
+          href: https://projectpisa.shinyapps.io/projectPISA/
+      - text: Project Poster 
+        href: https://projectpisa.netlify.app/poster/ISSS608-AY2023-24Jan-G1T2_Poster.jpg
+
 
 format:
   html:
