@@ -31,13 +31,13 @@ date-modified: "last-modified"
 
 ------------------------------------------------------------------------
 
-## **Agenda Item 1: Decision on Project Topic**
+## Agenda Item 1: Decision on Project Topic
 
 The team confirmed the decision to proceed with the ***VAST Challenge 2025 Mini-Challenge 1*** as the project topic. This decision was initially explored during the completion of **Take-home Exercise 2** and was reaffirmed in this meeting. The rationale for choosing this challenge is based on the clarity and structure of the dataset compared to the other two options. Specifically, Mini-Challenge 1 contains only network data, without the added complexity of timeline or geographical data, making it more suitable for the scope and focus of our planned analysis.
 
 ------------------------------------------------------------------------
 
-## **Agenda Item 2: Refining Project Methodology**
+## Agenda Item 2: Refining Project Methodology
 
 The team reviewed the initial methodology outlined in our project proposal and compared it with the individual storyboards developed for **Take-home Exercise 3**. The original methodology focused on using the Mini-Challenge 1 dataset to visualize the influence network centered around Sailor Shift and to analyze collaboration patterns, genre evolution, and artist relationships.
 
@@ -57,7 +57,7 @@ These enhancements ensure that the analytical components are both diversified an
 
 ------------------------------------------------------------------------
 
-## **Agenda Item 3: Confirming Project Timeline**
+## Agenda Item 3: Confirming Project Timeline
 
 The team agreed to follow the project timeline shown in our proposal. The timeline includes key steps such as data exploration, building each module, combining everything into the final app, testing, and preparing for the final presentation. Everyone is comfortable with the schedule, and no changes were suggested during the meeting.
 
