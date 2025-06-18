@@ -25,4 +25,3 @@ We're a trio of aspiring visual storytellers from **ISSS608: Visual Analytics an
 With a shared love for clarity, rhythm, and design, we compose data narratives that capture not just patterns — but the pulse behind them.
 
 From notes to networks, from melody to meaning — we invite you to explore how visual analytics can turn information into inspiration.
-

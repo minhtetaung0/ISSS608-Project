@@ -70,8 +70,8 @@ The project uses the official dataset from VAST Challenge 2025 [Mini-Challenge 1
 
 -   ***Membership and recording:*** MemberOf, RecordedBy, DistributedBy
 :::
-The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
 
+The dataset enables temporal, relational, and genre-based exploration of the interconnected music world surrounding Sailor Shift.
 
 # Methodology
 

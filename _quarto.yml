@@ -5,10 +5,8 @@ website:
   title: "🎶Folk Flow"
   navbar:
     left:
-      - href: team_intro.qmd
-        text: Team
-      - href: "Project Proposal_Group 13.html"
-        text: Introduction
+      - text: Introduction
+        href: "Project Proposal_Group 13.html"
       - text: Discovery
         menu: 
         - text: Data Wrangling
@@ -21,6 +19,13 @@ website:
           href: https://projectpisa.shinyapps.io/projectPISA/
       - text: Project Poster 
         href: https://projectpisa.netlify.app/poster/ISSS608-AY2023-24Jan-G1T2_Poster.jpg
+      - text: Team
+        href: team_intro.qmd
+      - text: 📝 Meeting Minutes
+        menu: 
+          - text: Meeting Minute 1 
+            href: "Meeting_Minutes/Meeting_Minutes_1.html"
+        
 
 
 format:

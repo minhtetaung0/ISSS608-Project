@@ -1,0 +1,90 @@
+---
+title: "Meeting Minute 1"
+author: "Group 13"
+date: "June 17, 2025"
+date-modified: "last-modified"
+---
+
+# ISSS608 Group 13 Meeting Minutes
+
+**Project Meeting 1:** Project Proposal, Project Methodology, Project Timeline, Project Task Allocation
+
+**Date:** 17/06/2025
+
+**Time:** 3pm – 4:15pm
+
+**In Attendance:** Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen
+
+**Note Taker:** Min Htet Aung
+
+------------------------------------------------------------------------
+
+## Agenda Items
+
+1.  Project Topic
+
+2.  Project Methodology
+
+3.  Project Timeline
+
+4.  Project Task Allocation
+
+------------------------------------------------------------------------
+
+## **Agenda Item 1: Decision on Project Topic**
+
+The team confirmed the decision to proceed with the ***VAST Challenge 2025 Mini-Challenge 1*** as the project topic. This decision was initially explored during the completion of **Take-home Exercise 2** and was reaffirmed in this meeting. The rationale for choosing this challenge is based on the clarity and structure of the dataset compared to the other two options. Specifically, Mini-Challenge 1 contains only network data, without the added complexity of timeline or geographical data, making it more suitable for the scope and focus of our planned analysis.
+
+------------------------------------------------------------------------
+
+## **Agenda Item 2: Refining Project Methodology**
+
+The team reviewed the initial methodology outlined in our project proposal and compared it with the individual storyboards developed for **Take-home Exercise 3**. The original methodology focused on using the Mini-Challenge 1 dataset to visualize the influence network centered around Sailor Shift and to analyze collaboration patterns, genre evolution, and artist relationships.
+
+During the meeting, we identified several refinements based on insights gained through the storyboarding process. Notably, *Huang Zihan’s* storyboard introduced a genre influence decomposition module using a ternary plot, highlighting demographic influences on genre formation. *Min Htet Aung* focused on network centrality and clustering to identify key players and genre communities, while *Nguyen Thao Nguyen* emphasized collaboration timelines and a detailed breakdown of artist roles in shaping Oceanus Folk.
+
+As a result, the refined methodology will now integrate:
+
+-    **Dynamic network analysis** to explore direct and indirect influence paths from Sailor Shift.
+
+-    **Genre composition breakdowns** using demographic aggregations and ternary visualizations.
+
+-    **Cluster and centrality-based profiling** to highlight rising stars and influential contributors.
+
+-    **Temporal and collaborative analysis** to trace artist involvement across albums and time.
+
+These enhancements ensure that the analytical components are both diversified and aligned with the exploratory needs of the dataset, allowing for a more comprehensive and multi-dimensional storytelling approach.
+
+------------------------------------------------------------------------
+
+## **Agenda Item 3: Confirming Project Timeline**
+
+The team agreed to follow the project timeline shown in our proposal. The timeline includes key steps such as data exploration, building each module, combining everything into the final app, testing, and preparing for the final presentation. Everyone is comfortable with the schedule, and no changes were suggested during the meeting.
+
+------------------------------------------------------------------------
+
+## Agenda Item 4: Allocating and Dividing Tasks for Project
+
+- **Project Repository & Website**  
+  Min Htet Aung will be responsible for setting up and maintaining the GitHub repository and project website (**Completed**)
+
+- **Prototype Development**  
+  - **Data Preprocessing**: Handled by Min Htet Aung.  
+  - **EDA**: Done collaboratively by Min Htet Aung, Huang Zihan, and Nguyen Thao Nguyen.  
+  - **Network Analysis**: Shared among all three members.  
+  - **Prediction Analysis**: Led by Min Htet Aung.  
+
+- **Discovery Phase**  
+  - Data wrangling and identifying key variables will be done by Min Htet Aung.  
+
+- **Shiny App Development**  
+  - **Section 1**: Nguyen Thao Nguyen  
+  - **Section 2**: Huang Zihan  
+  - **Section 3**: Min Htet Aung  
+  - **User Guide**:  
+    To be written last, by Nguyen Thao Nguyen and Min Htet Aung, after all modules are completed.  
+ 
+- **Project Poster**  
+  - Designed and created by Nguyen Thao Nguyen  
+
+Each team member is clear on their responsibilities, and the division of work ensures balanced contribution.
