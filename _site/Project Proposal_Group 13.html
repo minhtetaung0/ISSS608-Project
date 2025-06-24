@@ -127,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -207,12 +207,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
+  <ul class="collapse">
   <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
@@ -230,6 +229,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#project-schedule" id="toc-project-schedule" class="nav-link" data-scroll-target="#project-schedule">Project Schedule</a></li>
   </ul>
 </nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,39 +274,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-
-    <div class="col">
-      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
-        <h4 class="fw-bold anchored">The Spark</h4>
-        <p>The motivation for this project stems from the remarkable rise of Sailor Shift, a global music phenomenon born in Oceanus, and her pivotal role in elevating the Oceanus Folk genre.</p>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
-        <h4 class="fw-bold anchored">Cultural Momentum</h4>
-        <p>As Oceanus evolves from a quiet fishing island into a cultural powerhouse, there’s an urgent need to trace how Sailor’s career and artistry catalyzed the global spread of Oceanus Folk.</p>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
-        <h4 class="fw-bold anchored">The Data</h4>
-        <p>Local journalist Silas Reed compiled an extensive musical knowledge graph capturing relationships, influences, and collaborations in Sailor’s career and genre evolution.</p>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
-        <h4 class="fw-bold anchored">Our Goal</h4>
-        <p>We aim to support this research by creating an interactive system that lets users explore Sailor's trajectory and the spread of Oceanus Folk via collaborations and artist networks.</p>
-      </div>
-    </div>
-
-  </div>
-</div>
 <section id="motivation" class="level1">
 <h1>Motivation</h1>
 <p>The motivation for this project arises from the remarkable rise of Sailor Shift, a global music phenomenon originating from Oceanus, and the growing cultural influence of the Oceanus Folk genre. As Oceanus transforms from a quiet fishing island into a globally recognized cultural hub, there is an urgent need to trace and understand how Sailor’s career, collaborations, and artistic evolution have contributed to the global diffusion of Oceanus Folk.</p>
@@ -574,8 +544,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-9cc3a401aff9afe3c30f" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-9cc3a401aff9afe3c30f">{"x":{"visdat":{"1b0c7af24fd6":["function () ","plotlyVisDat"]},"cur_data":"1b0c7af24fd6","attrs":{"1b0c7af24fd6":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Quarto/ Netlify","xend":"2025-06-24","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"1b0c7af24fd6.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-24","y":"R Quarto/ Netlify","xend":"2025-07-06","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"1b0c7af24fd6.2":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Shiny App","xend":"2025-06-24","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"1b0c7af24fd6.3":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-24","y":"R Shiny App","xend":"2025-07-06","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"1b0c7af24fd6.4":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-08","y":"Poster","xend":"2025-06-24","yend":"Poster","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","inherit":true},"1b0c7af24fd6.5":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-24","y":"Poster","xend":"2025-06-25","yend":"Poster","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Project Timeline","xaxis":{"domain":[0,1],"automargin":true,"title":"","type":"date","tickformat":"%b %d"},"yaxis":{"domain":[0,1],"automargin":true,"title":"","categoryorder":"array","categoryarray":["Poster","Project Proposal","R Shiny App","R Quarto/ Netlify","Exploratory data analysis"],"type":"category"},"showlegend":false,"shapes":[{"type":"line","x0":"2025-06-24","x1":"2025-06-24","y0":-0.5,"y1":4.5,"line":{"color":"red","width":2}}],"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["2025-06-01","2025-06-24"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-24","2025-07-06"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-24"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-24","2025-07-06"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-08","2025-06-24"],"y":["Poster","Poster"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-24","2025-06-25"],"y":["Poster","Poster"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-ddd76ee730f6f591e305" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-ddd76ee730f6f591e305">{"x":{"visdat":{"12443c182a78":["function () ","plotlyVisDat"]},"cur_data":"12443c182a78","attrs":{"12443c182a78":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Quarto/ Netlify","xend":"2025-06-24","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"12443c182a78.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-24","y":"R Quarto/ Netlify","xend":"2025-07-06","yend":"R Quarto/ Netlify","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"12443c182a78.2":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-01","y":"R Shiny App","xend":"2025-06-24","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"12443c182a78.3":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-24","y":"R Shiny App","xend":"2025-07-06","yend":"R Shiny App","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","inherit":true},"12443c182a78.4":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-08","y":"Poster","xend":"2025-06-24","yend":"Poster","type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":"text","text":"<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","inherit":true},"12443c182a78.5":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":"2025-06-24","y":"Poster","xend":"2025-06-25","yend":"Poster","type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":"text","text":"<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Project Timeline","xaxis":{"domain":[0,1],"automargin":true,"title":"","type":"date","tickformat":"%b %d"},"yaxis":{"domain":[0,1],"automargin":true,"title":"","categoryorder":"array","categoryarray":["Poster","Project Proposal","R Shiny App","R Quarto/ Netlify","Exploratory data analysis"],"type":"category"},"showlegend":false,"shapes":[{"type":"line","x0":"2025-06-24","x1":"2025-06-24","y0":-0.5,"y1":4.5,"line":{"color":"red","width":2}}],"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["2025-06-01","2025-06-24"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-24","2025-07-06"],"y":["R Quarto/ Netlify","R Quarto/ Netlify"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Quarto/ Netlify<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-01","2025-06-24"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-24","2025-07-06"],"y":["R Shiny App","R Shiny App"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06","<b>R Shiny App<\/b><br>Start: Jun 01<br>End: Jul 06"],"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-08","2025-06-24"],"y":["Poster","Poster"],"type":"scatter","mode":"lines","line":{"color":"black","width":15},"hoverinfo":["text","text"],"text":["<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25"],"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2025-06-24","2025-06-25"],"y":["Poster","Poster"],"type":"scatter","mode":"lines","line":{"color":"pink","width":15},"hoverinfo":["text","text"],"text":["<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25","<b>Poster<\/b><br>Start: Jun 08<br>End: Jun 25"],"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"error_y":{"color":"rgba(140,86,75,1)"},"error_x":{"color":"rgba(140,86,75,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
