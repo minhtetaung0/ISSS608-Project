@@ -41,7 +41,7 @@ The team confirmed the decision to proceed with the ***VAST Challenge 2025 Mini-
 
 The team reviewed the initial methodology outlined in our project proposal and compared it with the individual storyboards developed for **Take-home Exercise 3**. The original methodology focused on using the Mini-Challenge 1 dataset to visualize the influence network centered around Sailor Shift and to analyze collaboration patterns, genre evolution, and artist relationships.
 
-During the meeting, we identified several refinements based on insights gained through the storyboarding process. Notably, *Huang Zihan’s* storyboard introduced a genre influence decomposition module using a ternary plot, highlighting demographic influences on genre formation. *Min Htet Aung* focused on network centrality and clustering to identify key players and genre communities, while *Nguyen Thao Nguyen* emphasized collaboration timelines and a detailed breakdown of artist roles in shaping Oceanus Folk.
+During the meeting, we identified several refinements based on insights gained through the storyboarding process. Notably, *Huang Zihan’s* storyboard introduced a genre influence decomposition module using a ternary plot, highlighting demographic influences on genre formation. *Min Htet Aung* focused on network centrality and clustering to identify key players and genre communities, while *Ta Nguyen Thao Nguyen* emphasized collaboration timelines and a detailed breakdown of artist roles in shaping Oceanus Folk.
 
 As a result, the refined methodology will now integrate:
 
@@ -70,7 +70,7 @@ The team agreed to follow the project timeline shown in our proposal. The timeli
 
 - **Prototype Development**  
   - **Data Preprocessing**: Handled by Min Htet Aung.  
-  - **EDA**: Done collaboratively by Min Htet Aung, Huang Zihan, and Nguyen Thao Nguyen.  
+  - **EDA**: Done collaboratively by Min Htet Aung, Huang Zihan, and Ta Nguyen Thao Nguyen.  
   - **Network Analysis**: Shared among all three members.  
   - **Prediction Analysis**: Led by Min Htet Aung.  
 
@@ -78,13 +78,13 @@ The team agreed to follow the project timeline shown in our proposal. The timeli
   - Data wrangling and identifying key variables will be done by Min Htet Aung.  
 
 - **Shiny App Development**  
-  - **Section 1**: Nguyen Thao Nguyen  
+  - **Section 1**: Ta Nguyen Thao Nguyen  
   - **Section 2**: Huang Zihan  
   - **Section 3**: Min Htet Aung  
   - **User Guide**:  
-    To be written last, by Nguyen Thao Nguyen and Min Htet Aung, after all modules are completed.  
+    To be written last, by Ta Nguyen Thao Nguyen and Min Htet Aung, after all modules are completed.  
  
 - **Project Poster**  
-  - Designed and created by Nguyen Thao Nguyen  
+  - Designed and created by Ta Nguyen Thao Nguyen  
 
 Each team member is clear on their responsibilities, and the division of work ensures balanced contribution.

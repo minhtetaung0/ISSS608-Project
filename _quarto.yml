@@ -25,6 +25,8 @@ website:
         menu: 
           - text: Meeting Minute 1 
             href: "Meeting_Minutes/Meeting_Minutes_1.html"
+          - text: Meeting Minute 2 
+            href: "Meeting_Minutes/Meeting_Minutes_2.html"
         
 
 
