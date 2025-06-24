@@ -16,9 +16,9 @@ website:
         - text: User Guide 
           href: user_guide.pdf
         - text: ShinyApp
-          href: https://projectpisa.shinyapps.io/projectPISA/
+          href: https://vaa-project-group13.shinyapps.io/Project_Shiny/
       - text: Project Poster 
-        href: https://projectpisa.netlify.app/poster/ISSS608-AY2023-24Jan-G1T2_Poster.jpg
+        href: "coming Soon"
       - text: Team
         href: team_intro.qmd
       - text: 📝 Meeting Minutes
