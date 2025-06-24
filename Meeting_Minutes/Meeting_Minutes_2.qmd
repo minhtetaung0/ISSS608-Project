@@ -39,8 +39,6 @@ Each member is aligned with the shared priorities, and individual responsibiliti
 
 Looking ahead, internal testing and peer feedback will guide improvements to ensure the app is polished before the next milestone.
 
-------------------------------------------------------------------------
-
 ## Agenda Item 2: Project Timeline Update
 
 Following a detailed review of the initial project timeline, the team reached a consensus to revise certain deadlines in order to optimize workflow and reduce last-minute pressure. The most notable change is the advancement of the ShinyApp completion deadline to an earlier date than originally planned.
