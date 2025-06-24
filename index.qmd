@@ -1,18 +1,29 @@
 ---
-title: ""
-format: 
-  html: 
-    toc: false
+title: ""                         
+page-layout: full                 
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    code-fold: true
     sidebar: false
+    css: styles.css
 ---
 
-
 <style>
-  body{
+
+/* Full-page background image */
+body{
   background-image: url("images/index.bckgrnd.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 </style>
+
+
+
 

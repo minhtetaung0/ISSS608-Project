@@ -7,6 +7,10 @@ format:
   html:
     code-fold: true
     code-summary: "Show the code"
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    css: styles.css
 editor: visual
 execute: 
   eval: true
@@ -14,6 +18,41 @@ execute:
   warning: false
   freeze: true
 ---
+```{=html}
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <div class="col">
+      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
+        <h4 class="fw-bold">The Spark</h4>
+        <p>The motivation for this project stems from the remarkable rise of Sailor Shift, a global music phenomenon born in Oceanus, and her pivotal role in elevating the Oceanus Folk genre.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
+        <h4 class="fw-bold">Cultural Momentum</h4>
+        <p>As Oceanus evolves from a quiet fishing island into a cultural powerhouse, there’s an urgent need to trace how Sailor’s career and artistry catalyzed the global spread of Oceanus Folk.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
+        <h4 class="fw-bold">The Data</h4>
+        <p>Local journalist Silas Reed compiled an extensive musical knowledge graph capturing relationships, influences, and collaborations in Sailor’s career and genre evolution.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="p-4 bg-pink rounded-3 shadow-sm h-100">
+        <h4 class="fw-bold">Our Goal</h4>
+        <p>We aim to support this research by creating an interactive system that lets users explore Sailor's trajectory and the spread of Oceanus Folk via collaborations and artist networks.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+```
 
 # Motivation
 
