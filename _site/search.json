@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "team_intro.html",
     "href": "team_intro.html",
     "title": "🎵 Meet the Ensemble: Folk Flow",
@@ -49,11 +56,46 @@
     "text": "Project Repository & Website\nMin Htet Aung will be responsible for setting up and maintaining the GitHub repository and project website (Completed)\nPrototype Development\n\nData Preprocessing: Handled by Min Htet Aung.\n\nEDA: Done collaboratively by Min Htet Aung, Huang Zihan, and Ta Nguyen Thao Nguyen.\n\nNetwork Analysis: Shared among all three members.\n\nPrediction Analysis: Led by Min Htet Aung.\n\nDiscovery Phase\n\nData wrangling and identifying key variables will be done by Min Htet Aung.\n\nShiny App Development\n\nSection 1: Ta Nguyen Thao Nguyen\n\nSection 2: Huang Zihan\n\nSection 3: Min Htet Aung\n\nUser Guide:\nTo be written last, by Ta Nguyen Thao Nguyen and Min Htet Aung, after all modules are completed.\n\nProject Poster\n\nDesigned and created by Ta Nguyen Thao Nguyen\n\n\nEach team member is clear on their responsibilities, and the division of work ensures balanced contribution."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "Meeting_Minutes/Meeting_Minutes_3.html",
+    "href": "Meeting_Minutes/Meeting_Minutes_3.html",
+    "title": "Meeting Minutes 3",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Project Meeting 3: Shiny App & Poster Progress Tracking\nDate: 28/06/2025\nTime: 5pm – 6pm\nIn Attendance: Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen\nNote Taker: Huang Zihan\n\n\n\nReview of Shiny App Progress\nSuggestions for Shiny App Improvements\nPoster Preparation and Task Division\n\n\n\nThe team has completed approximately 90% of the Oceanus Folk Influence Explorer Shiny app.\nCompleted modules include:\n\nOverview Page: Introduction and summary of the dataset\nExploratory Data Analysis (EDA): Insights on genre distribution, release timelines, and artist demographics\nArtist Profiles: Detailed career timelines, ego networks, and work histories for individual artists\nSailor Shift’s Influence Analysis: Visualization of how Sailor Shift has influenced other artists and how other artists interact with Sailor Shift.\nCluster Analysis: Identification and visualization of artist clusters with key metrics and interpretation aids\n\nRemaining tasks:\n\nPrediction Analysis Module: Aimed at identifying potential rising stars using rule-based or algorithmic methods\nOceanus Folk Influence Module: Focused on mapping how Oceanus Folk has been influenced by and has influenced other genres and artists over time\n\nThe team will continue working on these final modules to complete the app in preparation for poster presentation and submission.\n\n\n\nThe team identified key areas for enhancement and resolution:\n\nFix the crash in the Cluster Analysis module, which currently causes instability in the app due to rendering or data alignment issues.\nComplete the Oceanus Folk Influence Analysis, focusing on visualizing its genre-level and artist-level interactions over time.\nImplement the Prediction Analysis module, which will identify potential future stars based on artist profiles and relevant metrics.\n\nThese improvements are prioritized for completion before final testing and poster submission to ensure a stable and feature-complete application.\n\n\n\nThe team finalized the structure and key sections of the poster. The poster will include:\n\nIntroduction\nMethodology\nInfluence Analysis\nCluster Analysis\nPrediction Analysis\nConclusion\n\nWork division for content preparation:\n\nTa Nguyen Thao Nguyen: Responsible for the Introduction and Influence Analysis sections\nHuang Zihan: Responsible for Cluster Analysis and Conclusion\nMin Htet Aung: Responsible for Methodology and Prediction Analysis\n\nThe team will collaborate to ensure visual consistency and narrative coherence across sections, with timelines to be set for draft submissions and integration."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_3.html#agenda-items",
+    "href": "Meeting_Minutes/Meeting_Minutes_3.html#agenda-items",
+    "title": "Meeting Minutes 3",
+    "section": "",
+    "text": "Review of Shiny App Progress\nSuggestions for Shiny App Improvements\nPoster Preparation and Task Division\n\n\n\nThe team has completed approximately 90% of the Oceanus Folk Influence Explorer Shiny app.\nCompleted modules include:\n\nOverview Page: Introduction and summary of the dataset\nExploratory Data Analysis (EDA): Insights on genre distribution, release timelines, and artist demographics\nArtist Profiles: Detailed career timelines, ego networks, and work histories for individual artists\nSailor Shift’s Influence Analysis: Visualization of how Sailor Shift has influenced other artists and how other artists interact with Sailor Shift.\nCluster Analysis: Identification and visualization of artist clusters with key metrics and interpretation aids\n\nRemaining tasks:\n\nPrediction Analysis Module: Aimed at identifying potential rising stars using rule-based or algorithmic methods\nOceanus Folk Influence Module: Focused on mapping how Oceanus Folk has been influenced by and has influenced other genres and artists over time\n\nThe team will continue working on these final modules to complete the app in preparation for poster presentation and submission.\n\n\n\nThe team identified key areas for enhancement and resolution:\n\nFix the crash in the Cluster Analysis module, which currently causes instability in the app due to rendering or data alignment issues.\nComplete the Oceanus Folk Influence Analysis, focusing on visualizing its genre-level and artist-level interactions over time.\nImplement the Prediction Analysis module, which will identify potential future stars based on artist profiles and relevant metrics.\n\nThese improvements are prioritized for completion before final testing and poster submission to ensure a stable and feature-complete application.\n\n\n\nThe team finalized the structure and key sections of the poster. The poster will include:\n\nIntroduction\nMethodology\nInfluence Analysis\nCluster Analysis\nPrediction Analysis\nConclusion\n\nWork division for content preparation:\n\nTa Nguyen Thao Nguyen: Responsible for the Introduction and Influence Analysis sections\nHuang Zihan: Responsible for Cluster Analysis and Conclusion\nMin Htet Aung: Responsible for Methodology and Prediction Analysis\n\nThe team will collaborate to ensure visual consistency and narrative coherence across sections, with timelines to be set for draft submissions and integration."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html",
+    "href": "Meeting_Minutes/Meeting_Minutes_2.html",
+    "title": "Meeting Minute 2",
+    "section": "",
+    "text": "Project Meeting 2: Project Update\nDate: 26/06/2025\nTime: 10pm – 10:30pm\nIn Attendance: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nNote Taker: Ta Nguyen Thao Nguyen\n\n\n\n\nProject Progress Update\nProject Timeline Update\n\n\n\n\n\nThe team is currently progressing steadily and in alignment with the original project plan. All key milestones, deliverables, and interim checkpoints remain on track, with no major delays or setbacks reported thus far. Weekly check-ins and collaborative tools (such as GitHub, Trello, and group chat channels) have facilitated clear communication and accountability among all members.\nAt this stage, our primary area of focus is the development and refinement of the ShinyApp, which functions as the central component of our project. The ShinyApp is critical, as it directly supports multiple interconnected elements of the overall deliverable, including data visualization, user interaction, and report generation. Ensuring this application is stable, intuitive, and fully functional is essential for the success of the final presentation and supporting materials.\nThe development process is well underway, with progress being made on both the user interface and server-side logic. The team has been actively collaborating on design choices, UI layout, data preprocessing, and reactive elements to ensure the app meets both user expectations and project requirements. Additional attention is being paid to usability and responsiveness, based on feedback gathered during internal testing.\nEach member is aligned with the shared priorities, and individual responsibilities have been clearly distributed to match both technical strengths and learning goals. For example, one member is focusing on the backend server logic, another on dashboard design, while others are contributing to the data cleaning, documentation, and testing processes. This clear division of labor ensures that contributions are balanced and productive across the team.\nLooking ahead, internal testing and peer feedback will guide improvements to ensure the app is polished before the next milestone.\n\n\n\nFollowing a detailed review of the initial project timeline, the team reached a consensus to revise certain deadlines in order to optimize workflow and reduce last-minute pressure. The most notable change is the advancement of the ShinyApp completion deadline to an earlier date than originally planned.\nThis adjustment was made strategically to allow ample time to focus on the Poster and User Guide, two deliverables that benefit from thoughtful planning, editing, and design. By completing the core application earlier, we create a buffer that enables more deliberate work on documentation and presentation materials, reducing the risk of rushed output near the final deadline.\nIn preparation for the final presentation, a rehearsal session has also been scheduled. This session will allow the team to practice the flow, timing, and delivery of the presentation, ensuring that all team members are confident in their speaking roles and that the content is well-structured and engaging. Any technical hiccups, inconsistencies, or content gaps identified during the rehearsal will be addressed in advance of the actual presentation day.\nFurthermore, the team reaffirmed each member’s roles and contributions, ensuring clarity on expectations and workloads. This helps prevent overlap, miscommunication, or gaps in task ownership. Progress continues to be monitored weekly, with flexibility built into the timeline to accommodate unexpected challenges or new ideas that may emerge during the development and testing phases.\n\nIn summary, the updated timeline reflects a proactive approach to time management and quality assurance. With a clear roadmap ahead and strong coordination among members, the team is well-positioned to complete all components of the project on time and to a high standard."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-items",
+    "href": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-items",
+    "title": "Meeting Minute 2",
+    "section": "",
+    "text": "Project Progress Update\nProject Timeline Update"
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-1-project-progress-update",
+    "href": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-1-project-progress-update",
+    "title": "Meeting Minute 2",
+    "section": "",
+    "text": "The team is currently progressing steadily and in alignment with the original project plan. All key milestones, deliverables, and interim checkpoints remain on track, with no major delays or setbacks reported thus far. Weekly check-ins and collaborative tools (such as GitHub, Trello, and group chat channels) have facilitated clear communication and accountability among all members.\nAt this stage, our primary area of focus is the development and refinement of the ShinyApp, which functions as the central component of our project. The ShinyApp is critical, as it directly supports multiple interconnected elements of the overall deliverable, including data visualization, user interaction, and report generation. Ensuring this application is stable, intuitive, and fully functional is essential for the success of the final presentation and supporting materials.\nThe development process is well underway, with progress being made on both the user interface and server-side logic. The team has been actively collaborating on design choices, UI layout, data preprocessing, and reactive elements to ensure the app meets both user expectations and project requirements. Additional attention is being paid to usability and responsiveness, based on feedback gathered during internal testing.\nEach member is aligned with the shared priorities, and individual responsibilities have been clearly distributed to match both technical strengths and learning goals. For example, one member is focusing on the backend server logic, another on dashboard design, while others are contributing to the data cleaning, documentation, and testing processes. This clear division of labor ensures that contributions are balanced and productive across the team.\nLooking ahead, internal testing and peer feedback will guide improvements to ensure the app is polished before the next milestone."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-2-project-timeline-update",
+    "href": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-2-project-timeline-update",
+    "title": "Meeting Minute 2",
+    "section": "",
+    "text": "Following a detailed review of the initial project timeline, the team reached a consensus to revise certain deadlines in order to optimize workflow and reduce last-minute pressure. The most notable change is the advancement of the ShinyApp completion deadline to an earlier date than originally planned.\nThis adjustment was made strategically to allow ample time to focus on the Poster and User Guide, two deliverables that benefit from thoughtful planning, editing, and design. By completing the core application earlier, we create a buffer that enables more deliberate work on documentation and presentation materials, reducing the risk of rushed output near the final deadline.\nIn preparation for the final presentation, a rehearsal session has also been scheduled. This session will allow the team to practice the flow, timing, and delivery of the presentation, ensuring that all team members are confident in their speaking roles and that the content is well-structured and engaging. Any technical hiccups, inconsistencies, or content gaps identified during the rehearsal will be addressed in advance of the actual presentation day.\nFurthermore, the team reaffirmed each member’s roles and contributions, ensuring clarity on expectations and workloads. This helps prevent overlap, miscommunication, or gaps in task ownership. Progress continues to be monitored weekly, with flexibility built into the timeline to accommodate unexpected challenges or new ideas that may emerge during the development and testing phases.\n\nIn summary, the updated timeline reflects a proactive approach to time management and quality assurance. With a clear roadmap ahead and strong coordination among members, the team is well-positioned to complete all components of the project on time and to a high standard."
   },
   {
     "objectID": "Project Proposal_Group 13.html",
@@ -138,75 +180,5 @@
     "title": "Project Proposal",
     "section": "6. Emerging Artist Predictor",
     "text": "6. Emerging Artist Predictor\nThis interactive scatter plot highlights artists with the potential to become the next Oceanus Folk stars. Based on influence and collaboration metrics, users can filter by genre or time range to discover rising talent who resemble Sailor Shift’s early career profile."
-  },
-  {
-    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html",
-    "href": "Meeting_Minutes/Meeting_Minutes_2.html",
-    "title": "Meeting Minute 2",
-    "section": "",
-    "text": "Project Meeting 2: Project Update\nDate: 26/06/2025\nTime: 10pm – 10:30pm\nIn Attendance: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nNote Taker: Ta Nguyen Thao Nguyen\n\n\n\n\nProject Progress Update\nProject Timeline Update\n\n\n\n\n\nThe team is currently progressing steadily and in alignment with the original project plan. All key milestones, deliverables, and interim checkpoints remain on track, with no major delays or setbacks reported thus far. Weekly check-ins and collaborative tools (such as GitHub, Trello, and group chat channels) have facilitated clear communication and accountability among all members.\nAt this stage, our primary area of focus is the development and refinement of the ShinyApp, which functions as the central component of our project. The ShinyApp is critical, as it directly supports multiple interconnected elements of the overall deliverable, including data visualization, user interaction, and report generation. Ensuring this application is stable, intuitive, and fully functional is essential for the success of the final presentation and supporting materials.\nThe development process is well underway, with progress being made on both the user interface and server-side logic. The team has been actively collaborating on design choices, UI layout, data preprocessing, and reactive elements to ensure the app meets both user expectations and project requirements. Additional attention is being paid to usability and responsiveness, based on feedback gathered during internal testing.\nEach member is aligned with the shared priorities, and individual responsibilities have been clearly distributed to match both technical strengths and learning goals. For example, one member is focusing on the backend server logic, another on dashboard design, while others are contributing to the data cleaning, documentation, and testing processes. This clear division of labor ensures that contributions are balanced and productive across the team.\nLooking ahead, internal testing and peer feedback will guide improvements to ensure the app is polished before the next milestone.\n\n\n\nFollowing a detailed review of the initial project timeline, the team reached a consensus to revise certain deadlines in order to optimize workflow and reduce last-minute pressure. The most notable change is the advancement of the ShinyApp completion deadline to an earlier date than originally planned.\nThis adjustment was made strategically to allow ample time to focus on the Poster and User Guide, two deliverables that benefit from thoughtful planning, editing, and design. By completing the core application earlier, we create a buffer that enables more deliberate work on documentation and presentation materials, reducing the risk of rushed output near the final deadline.\nIn preparation for the final presentation, a rehearsal session has also been scheduled. This session will allow the team to practice the flow, timing, and delivery of the presentation, ensuring that all team members are confident in their speaking roles and that the content is well-structured and engaging. Any technical hiccups, inconsistencies, or content gaps identified during the rehearsal will be addressed in advance of the actual presentation day.\nFurthermore, the team reaffirmed each member’s roles and contributions, ensuring clarity on expectations and workloads. This helps prevent overlap, miscommunication, or gaps in task ownership. Progress continues to be monitored weekly, with flexibility built into the timeline to accommodate unexpected challenges or new ideas that may emerge during the development and testing phases.\n\nIn summary, the updated timeline reflects a proactive approach to time management and quality assurance. With a clear roadmap ahead and strong coordination among members, the team is well-positioned to complete all components of the project on time and to a high standard."
-  },
-  {
-    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-items",
-    "href": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-items",
-    "title": "Meeting Minute 2",
-    "section": "",
-    "text": "Project Progress Update\nProject Timeline Update"
-  },
-  {
-    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-1-project-progress-update",
-    "href": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-1-project-progress-update",
-    "title": "Meeting Minute 2",
-    "section": "",
-    "text": "The team is currently progressing steadily and in alignment with the original project plan. All key milestones, deliverables, and interim checkpoints remain on track, with no major delays or setbacks reported thus far. Weekly check-ins and collaborative tools (such as GitHub, Trello, and group chat channels) have facilitated clear communication and accountability among all members.\nAt this stage, our primary area of focus is the development and refinement of the ShinyApp, which functions as the central component of our project. The ShinyApp is critical, as it directly supports multiple interconnected elements of the overall deliverable, including data visualization, user interaction, and report generation. Ensuring this application is stable, intuitive, and fully functional is essential for the success of the final presentation and supporting materials.\nThe development process is well underway, with progress being made on both the user interface and server-side logic. The team has been actively collaborating on design choices, UI layout, data preprocessing, and reactive elements to ensure the app meets both user expectations and project requirements. Additional attention is being paid to usability and responsiveness, based on feedback gathered during internal testing.\nEach member is aligned with the shared priorities, and individual responsibilities have been clearly distributed to match both technical strengths and learning goals. For example, one member is focusing on the backend server logic, another on dashboard design, while others are contributing to the data cleaning, documentation, and testing processes. This clear division of labor ensures that contributions are balanced and productive across the team.\nLooking ahead, internal testing and peer feedback will guide improvements to ensure the app is polished before the next milestone."
-  },
-  {
-    "objectID": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-2-project-timeline-update",
-    "href": "Meeting_Minutes/Meeting_Minutes_2.html#agenda-item-2-project-timeline-update",
-    "title": "Meeting Minute 2",
-    "section": "",
-    "text": "Following a detailed review of the initial project timeline, the team reached a consensus to revise certain deadlines in order to optimize workflow and reduce last-minute pressure. The most notable change is the advancement of the ShinyApp completion deadline to an earlier date than originally planned.\nThis adjustment was made strategically to allow ample time to focus on the Poster and User Guide, two deliverables that benefit from thoughtful planning, editing, and design. By completing the core application earlier, we create a buffer that enables more deliberate work on documentation and presentation materials, reducing the risk of rushed output near the final deadline.\nIn preparation for the final presentation, a rehearsal session has also been scheduled. This session will allow the team to practice the flow, timing, and delivery of the presentation, ensuring that all team members are confident in their speaking roles and that the content is well-structured and engaging. Any technical hiccups, inconsistencies, or content gaps identified during the rehearsal will be addressed in advance of the actual presentation day.\nFurthermore, the team reaffirmed each member’s roles and contributions, ensuring clarity on expectations and workloads. This helps prevent overlap, miscommunication, or gaps in task ownership. Progress continues to be monitored weekly, with flexibility built into the timeline to accommodate unexpected challenges or new ideas that may emerge during the development and testing phases.\n\nIn summary, the updated timeline reflects a proactive approach to time management and quality assurance. With a clear roadmap ahead and strong coordination among members, the team is well-positioned to complete all components of the project on time and to a high standard."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "🎶Folk Flow",
-    "section": "",
-    "text": "## Why we built Folk Flow {#overview}\n\n\n\n\n\n  \n    \n    Inspire\n    Show how folk music influences modern genres.\n  \n\n\n\n\n\n  \n    \n    Inform\n    Uncover hidden geographic trends with interactive maps.\n  \n\n\n\n\n\n  \n    \n    Engage\n    Provide an open platform for musicians and fans to explore data."
-  },
-  {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "🎶 Welcome to Folk Flow",
-    "section": "",
-    "text": "This is the landing page of our ISSS608 project: Folk Flow."
-  },
-  {
-    "objectID": "index.html#project-objectives",
-    "href": "index.html#project-objectives",
-    "title": "🎶 Welcome to Folk Flow",
-    "section": "2 Project Objectives",
-    "text": "2 Project Objectives\nWe aim to visualize how music culture evolves across regions…"
-  },
-  {
-    "objectID": "index.html#dataset-summary",
-    "href": "index.html#dataset-summary",
-    "title": "🎶 Welcome to Folk Flow",
-    "section": "3 Dataset Summary",
-    "text": "3 Dataset Summary\nOur dataset includes multiple sources on genre popularity, Spotify rankings…"
-  },
-  {
-    "objectID": "index.html#key-features",
-    "href": "index.html#key-features",
-    "title": "🎶 Welcome to Folk Flow",
-    "section": "4 Key Features",
-    "text": "4 Key Features\n\n🎵 Interactive Shiny App\n\n📊 Visual Analytics dashboard\n\n🧹 Wrangled data with tidy principles"
-  },
-  {
-    "objectID": "index.html#meet-the-team",
-    "href": "index.html#meet-the-team",
-    "title": "🎶 Welcome to Folk Flow",
-    "section": "5 Meet the Team",
-    "text": "5 Meet the Team\nWe are SMU MITB Group 13: Zi Han, Min Tet Aung, and Cindy Ta…"
   }
 ]

@@ -1,5 +1,6 @@
 ---
 title: "Meeting Minute 2"
+format: html
 author: "Group 13"
 date: "June 26, 2025"
 date-modified: "last-modified"

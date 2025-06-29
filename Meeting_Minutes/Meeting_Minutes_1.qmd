@@ -1,5 +1,6 @@
 ---
 title: "Meeting Minute 1"
+format: html
 author: "Group 13"
 date: "June 17, 2025"
 date-modified: "last-modified"
@@ -45,13 +46,13 @@ During the meeting, we identified several refinements based on insights gained t
 
 As a result, the refined methodology will now integrate:
 
--    **Dynamic network analysis** to explore direct and indirect influence paths from Sailor Shift.
+-   **Dynamic network analysis** to explore direct and indirect influence paths from Sailor Shift.
 
--    **Genre composition breakdowns** using demographic aggregations and ternary visualizations.
+-   **Genre composition breakdowns** using demographic aggregations and ternary visualizations.
 
--    **Cluster and centrality-based profiling** to highlight rising stars and influential contributors.
+-   **Cluster and centrality-based profiling** to highlight rising stars and influential contributors.
 
--    **Temporal and collaborative analysis** to trace artist involvement across albums and time.
+-   **Temporal and collaborative analysis** to trace artist involvement across albums and time.
 
 These enhancements ensure that the analytical components are both diversified and aligned with the exploratory needs of the dataset, allowing for a more comprehensive and multi-dimensional storytelling approach.
 
@@ -65,26 +66,30 @@ The team agreed to follow the project timeline shown in our proposal. The timeli
 
 ## Agenda Item 4: Allocating and Dividing Tasks for Project
 
-- **Project Repository & Website**  
-  Min Htet Aung will be responsible for setting up and maintaining the GitHub repository and project website (**Completed**)
+-   **Project Repository & Website**\
+    Min Htet Aung will be responsible for setting up and maintaining the GitHub repository and project website (**Completed**)
 
-- **Prototype Development**  
-  - **Data Preprocessing**: Handled by Min Htet Aung.  
-  - **EDA**: Done collaboratively by Min Htet Aung, Huang Zihan, and Ta Nguyen Thao Nguyen.  
-  - **Network Analysis**: Shared among all three members.  
-  - **Prediction Analysis**: Led by Min Htet Aung.  
+-   **Prototype Development**
 
-- **Discovery Phase**  
-  - Data wrangling and identifying key variables will be done by Min Htet Aung.  
+    -   **Data Preprocessing**: Handled by Min Htet Aung.\
+    -   **EDA**: Done collaboratively by Min Htet Aung, Huang Zihan, and Ta Nguyen Thao Nguyen.\
+    -   **Network Analysis**: Shared among all three members.\
+    -   **Prediction Analysis**: Led by Min Htet Aung.
 
-- **Shiny App Development**  
-  - **Section 1**: Ta Nguyen Thao Nguyen  
-  - **Section 2**: Huang Zihan  
-  - **Section 3**: Min Htet Aung  
-  - **User Guide**:  
-    To be written last, by Ta Nguyen Thao Nguyen and Min Htet Aung, after all modules are completed.  
- 
-- **Project Poster**  
-  - Designed and created by Ta Nguyen Thao Nguyen  
+-   **Discovery Phase**
+
+    -   Data wrangling and identifying key variables will be done by Min Htet Aung.
+
+-   **Shiny App Development**
+
+    -   **Section 1**: Ta Nguyen Thao Nguyen\
+    -   **Section 2**: Huang Zihan\
+    -   **Section 3**: Min Htet Aung\
+    -   **User Guide**:\
+        To be written last, by Ta Nguyen Thao Nguyen and Min Htet Aung, after all modules are completed.
+
+-   **Project Poster**
+
+    -   Designed and created by Ta Nguyen Thao Nguyen
 
 Each team member is clear on their responsibilities, and the division of work ensures balanced contribution.

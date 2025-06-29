@@ -1,0 +1,89 @@
+---
+title: "Meeting Minutes 3"
+format: html
+author: "Group 13"
+date: "June 28, 2025"
+date-modified: "last-modified"
+---
+
+# ISSS608 Group 13 Meeting Minutes
+
+**Project Meeting 3**: Shiny App & Poster Progress Tracking
+
+**Date**: 28/06/2025
+
+**Time**: 5pm – 6pm
+
+**In Attendance**: Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen
+
+**Note Taker**: Huang Zihan
+
+## Agenda Items
+
+1.  Review of Shiny App Progress
+
+2.  Suggestions for Shiny App Improvements
+
+3.  Poster Preparation and Task Division
+
+### Agenda Item 1: R Shiny App Progress Review
+
+The team has completed approximately 90% of the Oceanus Folk Influence Explorer Shiny app.
+
+**Completed modules include:**
+
+-   Overview Page: Introduction and summary of the dataset
+
+-   Exploratory Data Analysis (EDA): Insights on genre distribution, release timelines, and artist demographics
+
+-   Artist Profiles: Detailed career timelines, ego networks, and work histories for individual artists
+
+-   Sailor Shift's Influence Analysis: Visualization of how Sailor Shift has influenced other artists and how other artists interact with Sailor Shift.
+
+-   Cluster Analysis: Identification and visualization of artist clusters with key metrics and interpretation aids
+
+**Remaining tasks:**
+
+-   Prediction Analysis Module: Aimed at identifying potential rising stars using rule-based or algorithmic methods
+
+-   Oceanus Folk Influence Module: Focused on mapping how Oceanus Folk has been influenced by and has influenced other genres and artists over time
+
+The team will continue working on these final modules to complete the app in preparation for poster presentation and submission.
+
+### Agenda Item 2: Suggestions for Shiny App Improvements
+
+**The team identified key areas for enhancement and resolution:**
+
+-   Fix the crash in the Cluster Analysis module, which currently causes instability in the app due to rendering or data alignment issues.
+
+-   Complete the Oceanus Folk Influence Analysis, focusing on visualizing its genre-level and artist-level interactions over time.
+
+-   Implement the Prediction Analysis module, which will identify potential future stars based on artist profiles and relevant metrics.
+
+These improvements are prioritized for completion before final testing and poster submission to ensure a stable and feature-complete application.
+
+### Agenda Item 3: Confirming Project Timeline
+
+The team finalized the structure and key sections of the poster. **The poster will include:**
+
+-   Introduction
+
+-   Methodology
+
+-   Influence Analysis
+
+-   Cluster Analysis
+
+-   Prediction Analysis
+
+-   Conclusion
+
+**Work division for content preparation:**
+
+-   **Ta Nguyen Thao Nguyen**: Responsible for the Introduction and Influence Analysis sections
+
+-   **Huang Zihan**: Responsible for Cluster Analysis and Conclusion
+
+-   **Min Htet Aung**: Responsible for Methodology and Prediction Analysis
+
+The team will collaborate to ensure visual consistency and narrative coherence across sections, with timelines to be set for draft submissions and integration.

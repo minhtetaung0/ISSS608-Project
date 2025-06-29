@@ -11,6 +11,7 @@ format:
     css: styles.css
 ---
 
+```{=html}
 <style>
 
 /* Full-page background image */
@@ -23,7 +24,4 @@ body{
 }
 
 </style>
-
-
-
-
+```
