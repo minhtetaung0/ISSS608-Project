@@ -9,6 +9,7 @@ format:
     code-fold: true
     sidebar: false
     css: styles.css
+    include-footer: _footer.qmd
 ---
 
 ```{=html}

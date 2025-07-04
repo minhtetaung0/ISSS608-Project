@@ -1,0 +1,335 @@
+---
+title: "Data Preprocessing"
+author: "Group 13"
+---
+
+# Data Wrangling Pipeline for Oceanus Folk Influence Explorer
+
+Below is the comprehensive data processing pipeline with detailed explanations for each step and code to save intermediate datasets as RDS files for future use.
+
+## 1. Initial Data Loading and Cleaning
+
+```{r}
+
+pacman::p_load(
+  # Core packages
+  tidyverse,    # dplyr, ggplot2, tidyr, etc.
+  jsonlite,     # JSON file reading
+  janitor,      # Data cleaning
+  lubridate,    # Date handling
+  
+  # Network/graph packages
+  tidygraph,    # Graph manipulation
+  igraph,       # Network analysis
+  ggraph,       # Network visualization
+  
+  # Additional utilities
+  here,         # File path management
+  glue,         # String interpolation
+  fs            # File system operations
+)
+# Load JSON data
+data_path <- "data/MC1_graph.json"
+kg <- fromJSON(data_path)
+
+# Convert to tibbles and clean names
+nodes_tbl <- as_tibble(kg$nodes) %>% 
+  clean_names() %>%
+  mutate(
+    release_date = as.integer(release_date),
+    id = as.integer(id)
+  ) %>%
+  distinct()
+
+edges_tbl <- as_tibble(kg$links) %>% 
+  clean_names()
+
+# Save raw data
+saveRDS(nodes_tbl, "data/processed/nodes_raw.rds")
+saveRDS(edges_tbl, "data/processed/edges_raw.rds")
+```
+
+Explanation:
+
+-   Loads the graph data from JSON format
+-   Converts to tidyverse tibbles and cleans column names
+-   Ensures proper data types for critical columns
+-   Removes duplicate nodes
+-   Saves raw data for archival purposes
+
+## 2. ID Mapping and Graph Construction
+
+```{r}
+# Create mapping between original IDs and sequential indices
+id_map <- tibble(
+  id = nodes_tbl$id, 
+  index = seq_len(nrow(nodes_tbl)))
+saveRDS(id_map, "data/processed/id_mapping.rds")
+
+# Map edge sources and targets to sequential indices
+edges_tbl_mapped <- edges_tbl %>%
+  left_join(id_map, by = c("source" = "id")) %>% 
+  rename(from = index) %>%
+  left_join(id_map, by = c("target" = "id")) %>% 
+  rename(to = index) %>%
+  filter(!is.na(from), !is.na(to)) %>%
+  mutate(
+    from = as.integer(from),
+    to = as.integer(to)
+  )
+saveRDS(edges_tbl_mapped, "data/processed/edges_mapped.rds")
+
+# Build graph object
+graph <- tbl_graph(
+  nodes = nodes_tbl, 
+  edges = edges_tbl_mapped, 
+  directed = TRUE
+)
+saveRDS(graph, "data/processed/full_graph.rds")
+```
+
+Explanation:
+
+-   Creates a mapping between original node IDs and sequential indices
+
+-   Maps edge endpoints to these new indices for efficient graph processing
+
+-   Filters out edges with missing endpoints
+
+-   Constructs a tidygraph object for network analysis
+
+-   Saves all intermediate steps for graph reconstruction
+
+## 3. Node and Edge Categorization
+
+```{r}
+# Categorize nodes into supertypes
+nodes_tbl <- nodes_tbl %>%
+  mutate(
+    supertype = case_when(
+      node_type %in% c("Song", "Album") ~ "Work",
+      node_type %in% c("Person") ~ "Individual",
+      node_type %in% c("MusicalGroup") ~ "Group",
+      node_type %in% c("RecordLabel") ~ "Organization",
+      TRUE ~ "Other"
+    )
+  )
+saveRDS(nodes_tbl, "data/processed/nodes_categorized.rds")
+
+# Categorize edges into superedges
+edges_tbl_mapped <- edges_tbl_mapped %>%
+  mutate(
+    superedge = case_when(
+      edge_type %in% c("ComposerOf", "LyricistOf", "ProducerOf", "RecordedBy", "PerformerOf") ~ "Contributes",
+      edge_type %in% c("CoverOf", "DirectlySamples", "InterpolatesFrom", "LyricalReferenceTo") ~ "Collaborations",
+      edge_type %in% c("DistributedBy") ~ "Business",
+      edge_type %in% c("MemberOf") ~ "Membership",
+      edge_type %in% c("InStyleOf") ~ "StyleInfluence",
+      TRUE ~ "Other"
+    )
+  )
+saveRDS(edges_tbl_mapped, "data/processed/edges_categorized.rds")
+```
+
+Explanation:
+
+-   Creates higher-level categories for nodes to simplify analysis
+
+-   Groups similar edge types into meaningful supercategories
+
+-   Preserves original types while adding these analytical groupings
+
+-   Saves the enriched node and edge data
+
+## 4. Artist Profile Creation
+
+```{r}
+# Extract people and works
+people_tbl <- nodes_tbl %>% 
+  filter(supertype == "Individual") %>%
+  select(person_id = id, name)
+saveRDS(people_tbl, "data/processed/people_table.rds")
+
+works_tbl <- nodes_tbl %>% 
+  filter(supertype == "Work") %>%
+  select(work_id = id, release_date, genre, notable)
+saveRDS(works_tbl, "data/processed/works_table.rds")
+
+# Map contributions (artists to works)
+created_links <- edges_tbl_mapped %>%
+  filter(superedge == "Contributes") %>%
+  left_join(id_map, by = c("from" = "index")) %>% 
+  rename(person_id = id) %>%
+  left_join(id_map, by = c("to" = "index")) %>% 
+  rename(work_id = id)
+saveRDS(created_links, "data/processed/contribution_links.rds")
+
+# Create artist-work mapping with metadata
+artist_works <- created_links %>%
+  left_join(works_tbl, by = "work_id") %>%
+  filter(!is.na(release_date))
+saveRDS(artist_works, "data/processed/artist_works.rds")
+```
+
+Explanation:
+
+-   Separates people and works into dedicated tables
+
+-   Maps contribution relationships between artists and works
+
+-   Joins with work metadata to create comprehensive artist-work relationships
+
+-   Saves each component for flexible analysis
+
+## 5. Artist Profile Metrics Calculation
+
+```{r}
+# Calculate key metrics for each artist
+max_release <- max(artist_works$release_date, na.rm = TRUE)
+
+artists_profile <- artist_works %>%
+  group_by(person_id) %>%
+  summarise(
+    total_works = n(),
+    notable_works = sum(notable, na.rm = TRUE),
+    oceanus_folk_works = sum(genre == "Oceanus Folk", na.rm = TRUE),
+    first_release = min(release_date, na.rm = TRUE),
+    first_notable = suppressWarnings(min(release_date[notable == TRUE], na.rm = TRUE)),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    first_notable = ifelse(is.infinite(first_notable), NA_integer_, first_notable),
+    time_to_notability = ifelse(!is.na(first_notable), 
+                               first_notable - first_release, 
+                               max_release + 5 - first_release)
+  )
+
+# Add collaboration counts
+collaborations <- edges_tbl_mapped %>%
+  filter(superedge == "Collaborations") %>%
+  left_join(id_map, by = c("from" = "index")) %>%
+  count(id, name = "collaborations") %>%
+  rename(person_id = id)
+saveRDS(collaborations, "data/processed/collaboration_counts.rds")
+
+# Calculate genre diversity
+genre_diversity_tbl <- artist_works %>%
+  filter(!is.na(genre)) %>%
+  group_by(person_id) %>%
+  summarise(genre_diversity = n_distinct(genre), .groups = "drop")
+saveRDS(genre_diversity_tbl, "data/processed/genre_diversity.rds")
+
+# Final profile merge
+artists_profile <- artists_profile %>%
+  left_join(collaborations, by = "person_id") %>%
+  left_join(genre_diversity_tbl, by = "person_id") %>%
+  mutate(
+    collaborations = replace_na(collaborations, 0),
+    genre_diversity = replace_na(genre_diversity, 0)
+  ) %>%
+  inner_join(people_tbl, by = "person_id") %>%
+  relocate(person_id, name)
+saveRDS(artists_profile, "data/processed/artists_profile_complete.rds")
+```
+
+Explanation:
+
+-   Computes comprehensive metrics for artist analysis:
+    -   Productivity (total works)
+    -   Notability (notable works)
+    -   Genre specialization (Oceanus Folk works)
+    -   Career trajectory (time to first notable work)
+    -   Collaboration patterns
+    -   Genre diversity
+-   Handles edge cases (missing values, infinite values)
+-   Joins all metrics with artist names
+-   Saves both intermediate and final datasets
+
+## 6. Sailor Shift and Influence Network Processing
+
+```{r}
+# Identify Sailor Shift node
+sailor_id <- nodes_tbl %>% 
+  filter(str_detect(name, fixed("Sailor Shift", ignore_case = TRUE))) %>%
+  pull(id)
+saveRDS(sailor_id, "data/processed/sailor_shift_id.rds")
+
+# Define influence edge types
+influence_types <- c("LyricalReferenceTo", "CoverOf", "InterpolatesFrom", 
+                    "DirectlySamples", "InStyleOf", "PerformerOf", 
+                    "ComposerOf", "LyricistOf", "ProducerOf", "RecordedBy")
+saveRDS(influence_types, "data/processed/influence_types.rds")
+
+# Precompute Oceanus Folk songs and influence edges
+of_songs <- nodes_tbl %>% 
+  filter(node_type == "Song", genre == "Oceanus Folk")
+saveRDS(of_songs, "data/processed/oceanus_folk_songs.rds")
+
+influence_edges <- edges_tbl %>% 
+  filter(edge_type %in% influence_types)
+saveRDS(influence_edges, "data/processed/influence_edges.rds")
+
+# Extract 1-hop influence edges for Sailor Shift
+sailor_edges <- edges_tbl %>%
+  filter(edge_type %in% influence_types, 
+         source == sailor_id | target == sailor_id)
+saveRDS(sailor_edges, "data/processed/sailor_influence_edges.rds")
+
+# Prepare network visualization data
+influence_ids <- unique(c(sailor_edges$source, sailor_edges$target))
+
+vis_nodes <- nodes_tbl %>%
+  filter(id %in% influence_ids) %>%
+  mutate(
+    label = name,
+    group = ifelse(id == sailor_id, "Sailor Shift", node_type),
+    color = ifelse(id == sailor_id, "darkblue", "skyblue")
+  ) %>%
+  select(id, label, group, color)
+saveRDS(vis_nodes, "data/processed/network_vis_nodes.rds")
+
+vis_edges <- sailor_edges %>%
+  select(from = source, to = target, label = edge_type)
+saveRDS(vis_edges, "data/processed/network_vis_edges.rds")
+```
+
+Explanation:
+
+-   Identifies the key artist node (Sailor Shift)
+
+-   Defines relationship types considered as "influence"
+
+-   Extracts Oceanus Folk songs as a special subset
+
+-   Prepares network data specifically for visualization
+
+-   Saves all components needed for network analysis
+
+## 7. Cluster Analysis Preparation
+
+```{r}
+# Prepare scaled data for clustering
+cluster_data <- artists_profile %>%
+  select(total_works, notable_works, oceanus_folk_works, 
+         collaborations, time_to_notability, genre_diversity) %>%
+  na.omit() %>%
+  scale()  
+saveRDS(cluster_data, "data/processed/cluster_analysis_data.rds")
+
+# Create directory if it doesn't exist
+if(!dir.exists("data/processed")) {
+  dir.create("data/processed", recursive = TRUE)
+}
+```
+
+Explanation:
+
+-   Selects key numerical features for clustering
+
+-   Handles missing values
+
+-   Standardizes features to comparable scales
+
+-   Ensures output directory exists
+
+-   Saves the preprocessed clustering dataset

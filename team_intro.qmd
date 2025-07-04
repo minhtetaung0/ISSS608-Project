@@ -1,5 +1,10 @@
 ---
 title: "🎵 Meet the Ensemble: Folk Flow"
+format: html
+page-layout: full
+css: styles.css 
+toc: false
+include-footer: _footer.qmd
 ---
 
 **Every great performance begins with harmony.**\
@@ -25,3 +30,13 @@ We're a trio of aspiring visual storytellers from **ISSS608: Visual Analytics an
 With a shared love for clarity, rhythm, and design, we compose data narratives that capture not just patterns — but the pulse behind them.
 
 From notes to networks, from melody to meaning — we invite you to explore how visual analytics can turn information into inspiration.
+
+::: {class="site-footer-wrapper"}
+
+<footer class="site-footer">
+  Developed as part of the <em>Visual Analytics Application</em> course, MITB @ SMU, 2025.  
+  <strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.  
+  All rights reserved © 2025.
+</footer>
+
+:::

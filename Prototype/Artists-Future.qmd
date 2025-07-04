@@ -1,0 +1,393 @@
+---
+title: "Artists Profiles and Future Predictions"
+author: "Group 13"
+format: 
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+editor: visual
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+---
+
+# Loading packages
+```{r}
+pacman::p_load(tidyverse, jsonlite, SmartEDA, tidygraph, ggraph, igraph, lubridate, janitor, ggthemes, plotly, DT, ggfortify, visNetwork, factoextra, FactoMineR, fmsb, forcats)
+```
+
+# 6. Descriptive Statistics
+
+## 6.1. Rising Star Profile
+
+```{r}
+# Load pre-processed artist profiles
+rising_star_profile <- readRDS("data/processed/artists_profile_complete.rds")
+
+# Render interactive data table
+datatable(
+  rising_star_profile,
+  rownames = FALSE,
+  options = list(
+    pageLength = 10,
+    autoWidth = TRUE,
+    scrollX = TRUE,
+    order = list(list(3, 'desc'))  # Sort by total_works by default
+  ),
+  caption = htmltools::tags$caption(
+    style = 'caption-side: top; text-align: left; font-size: 16px; font-weight: bold;',
+    'Table: ', 'Rising Star Profile of Artists'
+  )
+)
+```
+
+# 7. Network Analysis and Visualization
+## 7.1. Influence Network for Oceanus Folk Genre
+
+```{r}
+# Load pre-processed network visualization data
+vis_nodes <- readRDS("data/processed/network_vis_nodes.rds")
+vis_edges <- readRDS("data/processed/network_vis_edges.rds")
+
+# Render the interactive network
+visNetwork(vis_nodes, vis_edges, height = "700px", width = "100%") %>%
+  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
+  visInteraction(navigationButtons = TRUE) %>%
+  visLayout(randomSeed = 42) %>%
+  visLegend(useGroups = TRUE, position = "right", main = "Node Types")
+```
+
+# 8. Clustering Analysis
+## 8.1. Data Preparation
+
+```{r}
+# Load artist profiles and filter for clustering
+rising_star_profile <- readRDS("data/processed/artists_profile_complete.rds")
+
+cluster_data <- rising_star_profile %>%
+  filter(!is.na(first_release)) %>%
+  select(name, total_works, notable_works, oceanus_folk_works, 
+         first_release, time_to_notability, collaborations) %>%
+  drop_na()
+
+cluster_scaled <- cluster_data %>%
+  select(-name) %>%
+  scale()
+```
+
+## 8.2. Determine Optimal Number of Clusters (Elbow Method)
+
+```{r, out.width="100%", out.height="600px"}
+set.seed(123)
+fviz_nbclust(cluster_scaled, kmeans, method = "wss") +
+  labs(title = "Elbow Method for Optimal K")
+```
+
+## 8.3. Apply K-Means Clustering
+
+```{r}
+set.seed(123)
+k_result <- kmeans(cluster_scaled, centers = 4, nstart = 25)
+
+cluster_data <- cluster_data %>%
+  mutate(cluster = factor(k_result$cluster))
+
+datatable(cluster_data, options = list(pageLength = 10))
+```
+
+## 8.4. Interactive PCA Plot
+
+```{r}
+pca_result <- prcomp(cluster_scaled, scale. = TRUE)
+pca_data <- as.data.frame(pca_result$x[, 1:2])
+
+pca_data <- pca_data %>%
+  mutate(
+    cluster = factor(k_result$cluster),
+    name = cluster_data$name
+  )
+
+pca <- ggplot(pca_data, aes(x = PC1, y = PC2, color = cluster)) +
+  geom_point(aes(text = paste0(
+    "<b>Name:</b> ", name, 
+    "<br><b>Cluster:</b> ", cluster
+  )), alpha = 0.8, size = 2) +
+  stat_ellipse(type = "norm", linetype = 2, aes(group = cluster), show.legend = FALSE) +
+  labs(
+    title = "Interactive PCA Cluster Plot",
+    x = "Principal Component 1",
+    y = "Principal Component 2"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    legend.position = "right"
+  )
+
+ggplotly(pca, tooltip = "text")
+```
+
+## 8.5. Cluster Summary Table
+
+```{r}
+cluster_summary <- cluster_data %>%
+  group_by(cluster) %>%
+  summarise(
+    total_works = mean(total_works, na.rm = TRUE),
+    notable_works = mean(notable_works, na.rm = TRUE),
+    oceanus_folk_works = mean(oceanus_folk_works, na.rm = TRUE),
+    first_release = mean(first_release, na.rm = TRUE),
+    time_to_notability = mean(time_to_notability, na.rm = TRUE),
+    collaborations = mean(collaborations, na.rm = TRUE),
+    count = n(),
+    .groups = "drop"
+  )
+
+datatable(cluster_summary, options = list(pageLength = 5))
+```
+
+# 9. Visualize the careers of three artists
+## 9.1. Identify the three Artists
+
+```{r}
+# Load pre-processed data
+rising_star_profile <- readRDS("data/processed/artists_profile_complete.rds")
+nodes_tbl <- readRDS("data/processed/nodes_categorized.rds")
+
+# Select artists
+artist_sailor <- rising_star_profile %>%
+  filter(str_detect(name, regex("Sailor Shift", ignore_case = TRUE)))
+
+ivy_members <- c("Maya Jensen", "Lila Hartman", "Jade Thompson", "Sophie Ramirez")
+artist_peer <- rising_star_profile %>%
+  filter(name %in% ivy_members) %>%
+  arrange(desc(notable_works)) %>%
+  slice(1)
+
+artist_emerging <- rising_star_profile %>%
+  filter(!name %in% c(ivy_members, "Sailor Shift")) %>%
+  filter(oceanus_folk_works > 0, time_to_notability >= 0) %>%
+  arrange(time_to_notability, desc(notable_works)) %>%
+  slice(1)
+
+selected_artists <- bind_rows(artist_sailor, artist_peer, artist_emerging)
+
+datatable(selected_artists, options = list(pageLength = 5), 
+          caption = "Selected Artists for Career Comparison")
+```
+
+## 9.2. Getting their Contributions (Songs/Albums)
+
+```{r}
+# Load pre-processed data
+edges_tbl_mapped <- readRDS("data/processed/edges_mapped.rds")
+id_map <- readRDS("data/processed/id_mapping.rds")
+
+# Prepare artist data
+artist_nodes <- selected_artists %>%
+  select(artist_id = person_id, artist_name = name)
+
+artist_nodes_indexed <- artist_nodes %>%
+  left_join(id_map, by = c("artist_id" = "id")) %>%
+  rename(index = index)
+
+relevant_types <- readRDS("data/processed/influence_types.rds")
+
+# Get artist works
+artist_edges <- edges_tbl_mapped %>%
+  filter(edge_type %in% relevant_types) %>%
+  left_join(artist_nodes_indexed, by = c("from" = "index")) %>%
+  filter(!is.na(artist_name))
+
+artist_works <- artist_edges %>%
+  left_join(
+    nodes_tbl %>%
+      select(work_id = id, work_name = name, work_type = node_type,
+             release_date, genre, notable),
+    by = c("to" = "work_id")
+  ) %>%
+  filter(work_type %in% c("Song", "Album")) %>%
+  select(artist_name, work_name, release_date, genre, notable, work_type, edge_type) %>%
+  mutate(release_date = as.integer(release_date)) %>%
+  arrange(artist_name, release_date)
+
+datatable(
+  artist_works,
+  rownames = FALSE,
+  options = list(
+    pageLength = 10,
+    autoWidth = TRUE,
+    scrollX = TRUE
+  ),
+  caption = htmltools::tags$caption(
+    style = 'caption-side: top; text-align: left; font-size: 16px; font-weight: bold;',
+    'Table: ', 'Works Contributed to or Influenced by Selected Artists'
+  )
+)
+```
+
+## 9.3. Plotting Career Timeline
+
+```{r , out.width="100%", out.height="600px"}
+top_genres <- artist_works %>%
+  count(genre, sort = TRUE) %>%
+  slice_head(n = 6) %>%
+  pull(genre)
+
+levels_genre_rev <- sort(top_genres, decreasing = TRUE)
+
+artist_subset <- artist_works %>%
+  filter(genre %in% top_genres) %>%
+  mutate(genre = factor(genre, levels = levels_genre_rev))
+
+ggplot(
+  artist_subset,
+  aes(x = release_date, y = artist_name, shape = genre, color = notable)
+) +
+  geom_jitter(width = 0.3, height = 0.3, size = 3, alpha = 0.7) +
+  scale_color_manual(values = c(`TRUE` = "#a1d99b", `FALSE` = "#fcbba1")) +
+  labs(
+    title  = "Timelines (Top Genres Sorted Z–A)",
+    shape  = "Genre",
+    color  = "Notable"
+  ) +
+  theme_minimal()
+```
+
+## 9.4. Plotting EGO Network Diagram for Top 3 Artists
+
+```{r}
+# Load pre-processed graph
+graph <- readRDS("data/processed/full_graph.rds")
+
+# Get artist indices
+ego_artist_nodes <- nodes_tbl %>%
+  filter(node_type == "Person", name %in% selected_artists$name) %>%  
+  left_join(id_map, by = c("id" = "id")) %>%
+  select(artist_name = name, artist_id = id, index)
+
+ego_indices <- ego_artist_nodes$index
+
+# Extract ego network
+ego_subgraph <- graph %>%
+  activate(nodes) %>%
+  filter(node_is_adjacent(ego_indices) | row_number() %in% ego_indices)
+
+# Prepare visualization data
+nodes_data <- ego_subgraph %>%
+  activate(nodes) %>%
+  as_tibble() %>%
+  mutate(
+    id = row_number(),
+    label = ifelse(!is.na(name), name, node_type),
+    group = node_type,
+    title = paste0("<b>", label, "</b><br>Type: ", node_type)
+  ) %>%
+  select(id, label, group, title)
+
+edges_data <- ego_subgraph %>%
+  activate(edges) %>%
+  as_tibble() %>%
+  mutate(
+    from = as.integer(from),
+    to = as.integer(to),
+    label = edge_type,
+    title = paste("Edge Type:", edge_type)
+  ) %>%
+  select(from, to, label, title)
+
+# Plot network
+visNetwork(nodes_data, edges_data, height = "600px", width = "100%") %>%
+  visOptions(
+    highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+    nodesIdSelection = TRUE
+  ) %>%
+  visInteraction(navigationButtons = TRUE) %>%
+  visLayout(randomSeed = 42) %>%
+  visLegend(
+    useGroups = TRUE,
+    position = "right",
+    main = "Node Type"
+  )
+```
+
+# 10. Predicting the next Oceanus Folk stars
+## 10.1. Defining Thresholds to Filter Candidates
+
+```{r}
+current_year <- 2025
+
+future_stars <- rising_star_profile %>%
+  filter(
+    oceanus_folk_works >= 5,
+    notable_works >= 6,
+    !name %in% selected_artists$name,
+    first_release >= (current_year - 10),
+    time_to_notability <= 3 | is.na(time_to_notability)
+  ) %>%
+  arrange(desc(notable_works), desc(collaborations)) 
+
+future_stars %>% select(name, total_works, notable_works, oceanus_folk_works, collaborations, time_to_notability)
+```
+
+## 10.2. Pick Top 3 Candidates and Justify
+
+```{r}
+top_3_future_stars <- future_stars %>% 
+  slice_max(order_by = notable_works + collaborations + oceanus_folk_works, n = 3)
+
+top_3_future_stars
+```
+
+## 10.3. Radar Chart for Each Candidates
+
+```{r}
+radar_data <- top_3_future_stars %>%
+  select(total_works, notable_works, oceanus_folk_works, collaborations, time_to_notability) %>%
+  as.data.frame()
+
+rownames(radar_data) <- top_3_future_stars$name
+colnames(radar_data) <- c("Total", "Notable", "Oceanus\nFolk", "Collabs", "Rapid\nRise")
+
+radar_data[, "Rapid\nRise"] <- max(radar_data[, "Rapid\nRise"], na.rm = TRUE) - 
+                               radar_data[, "Rapid\nRise"]
+
+radar_data_scaled <- as.data.frame(lapply(radar_data, function(x) {
+  scales::rescale(x, to = c(0, 100))
+}))
+rownames(radar_data_scaled) <- rownames(radar_data)
+
+par(mfrow = c(1, 3), 
+    mar = c(2, 2, 4, 2),
+    oma = c(1, 1, 3, 1),
+    family = "sans")
+
+for (i in 1:nrow(radar_data_scaled)) {
+  artist_name <- rownames(radar_data_scaled)[i]
+  artist_values <- radar_data_scaled[i, , drop = FALSE]
+  
+  radar_individual <- rbind(
+    rep(100, ncol(radar_data_scaled)),
+    rep(0, ncol(radar_data_scaled)),
+    artist_values
+  )
+  
+  radarchart(radar_individual,
+             axistype = 1,
+             pcol = "darkorange",
+             pfcol = rgb(1, 0.5, 0, 0.3),
+             plwd = 2,
+             cglcol = "gray",
+             cglty = 1,
+             cglwd = 0.8,
+             axislabcol = "darkblue",
+             caxislabels = paste0(seq(0, 100, 25), "%"),
+             vlcex = 0.85,
+             title = artist_name,
+             calcex = 0.8,
+             cex.main = 1.2)
+}
+```
+

@@ -1,0 +1,148 @@
+---
+title: "Introduction"
+format: html
+page-layout: full
+css: styles.css 
+toc: false
+include-footer: _footer.qmd
+---
+:::{.hero-banner .text-center}
+# 🎶 Folk Flow  
+**Exploring Evolution, Influence, and Emerging Stars in Oceanus Folk Music**
+
+Folk Flow is a data-driven musical research project analyzing how artists and genres interact, transform, and thrive within the Oceanus Folk ecosystem. By using influence graphs, machine learning, and prediction techniques, we dive deep into the genre’s development and the role Sailor Shift played in its transformation.
+:::
+
+
+
+::: {.section-heading}
+Main Analyses
+:::
+
+::: {.section-description}
+We developed the **Oceanus Folk Influence Explorer**, a Shiny dashboard that performs three key types of analysis:
+:::
+
+
+:::::: {style="display: flex; justify-content: center; gap: 4rem; margin-top: 2rem; flex-wrap: wrap;"}
+::: {style="text-align: center; width: 250px;"}
+<div><img src="images/icons/Network Analysis.svg" style="width: 100px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+**Network Analysis**  
+<span style="font-size: 0.9rem;">Mapping direct and indirect influence relationships using graph theory and centrality metrics.</span>
+:::
+::: {style="text-align: center; width: 250px;"}
+<div><img src="images/icons/Cluster Analysis.svg" style="width: 100px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+**Cluster Analysis**  
+<span style="font-size: 0.9rem;">Grouping artists by productivity, genre diversity, and collaboration using K-Means, PAM, and DBSCAN.</span>
+:::
+::: {style="text-align: center; width: 250px;"}
+<div><img src="images/icons/Prediction Analysis.svg" style="width: 100px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+**Future Analysis**  
+<span style="font-size: 0.9rem;">Forecasting rising stars using rule-based scores, growth models, and network centrality.</span>
+:::
+::::::
+
+
+::: {.key-findings}
+
+::: {.section-heading}
+<span>Key Findings</span>
+:::
+
+:::::: {style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem;"}
+
+::: {style="text-align: center; width: 180px;"}
+<div><img src="images/icons/Profile.svg" style="width: 80px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+<div class="kpi_card"><strong>11,358</strong><br>Total Artists</div>
+:::
+
+::: {style="text-align: center; width: 180px;"}
+<div><img src="images/icons/Notable_works.svg" style="width: 80px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+<div class="kpi_card"><strong>20,976</strong><br>Total Notable Works</div>
+:::
+
+::: {style="text-align: center; width: 180px;"}
+<div><img src="images/icons/time.svg" style="width: 80px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+<div class="kpi_card"><strong>0.8 Years</strong><br>Avg. Time to Notability</div>
+:::
+
+::: {style="text-align: center; width: 180px;"}
+<div><img src="images/icons/group.svg" style="width: 80px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+<div class="kpi_card"><strong>223</strong><br>Musical Groups Identified</div>
+:::
+
+::: {style="text-align: center; width: 180px;"}
+<div><img src="images/icons/music.svg" style="width: 80px; margin-bottom: 1rem; opacity: 0.8;" /></div>
+<div class="kpi_card"><strong>Dream Pop</strong><br>is the Most Frequent Genre</div>
+:::
+
+::::::
+
+:::
+
+::: {.section-heading}
+🎶 Folk Flow Explorer
+:::
+
+::: {.section-description}
+The Shiny dashboard includes 7 interactive modules with unique visual and analytical capabilities. Below are snapshots of key pages — hover for more details.
+:::
+
+:::::: {.explorer-grid}
+
+::: {.hover-box}
+<img src="images/Dashboard.png" class="img-fluid" alt="Overview Page">
+<div class="hover-text">📊 Overview: Summary KPIs, genre timelines, artist profile table, donut plots, and filters.</div>
+:::
+
+::: {.hover-box}
+<img src="images/EDA.png" class="img-fluid" alt="EDA Page">
+<div class="hover-text">📈 EDA: Explore node and edge types, genre heatmaps, and song distributions.</div>
+:::
+
+::: {.hover-box}
+<img src="images/Artist-comparison.png" class="img-fluid" alt="Artist Profiles">
+<div class="hover-text">👩‍🎤 Artist Profiles: Career timelines, ego networks, radar comparisons, and tables.</div>
+:::
+
+::: {.hover-box}
+<img src="images/Sailor-influence.png" class="img-fluid" alt="Sailor Influence">
+<div class="hover-text">🌐 Influence Network: Explore who Sailor Shift influenced and who influenced Sailor.</div>
+:::
+
+::: {.hover-box}
+<img src="images/Oceanus_influence.png" class="img-fluid" alt="Oceanus Influence">
+<div class="hover-text">🎶 Oceanus Folk Influence: Timeline, treemaps, lollipop charts, and genre flow networks.</div>
+:::
+
+::: {.hover-box}
+<img src="images/Cluster-analysis.png" class="img-fluid" alt="Cluster Analysis">
+<div class="hover-text">🔀 Cluster Analysis: Cluster proportions, PCA plots, boxplots, and model evaluation.</div>
+:::
+
+::: {.hover-box}
+<img src="images/Prediction-analysis.png" class="img-fluid" alt="Prediction Table">
+<div class="hover-text">🔮 Prediction Table: Composite Score, Growth Trajectory, and Network Centrality outputs.</div>
+:::
+
+::: {.hover-box}
+<img src="images/Metrics.png" class="img-fluid" alt="Metrics">
+<div class="hover-text">📏 Metrics: Tiers, scores, radar plots, and metric breakdowns by method.</div>
+:::
+
+::::::
+
+
+:::{.text-center .mt-4}
+[🚀 Launch the App →](https://vaa-project-group13.shinyapps.io/Project_Shiny/){.btn .btn-primary .btn-lg}
+:::
+
+::: {class="site-footer-wrapper"}
+
+<footer class="site-footer">
+  Developed as part of the <em>Visual Analytics Application</em> course, MITB @ SMU, 2025.  
+  <strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.  
+  All rights reserved © 2025.
+</footer>
+
+:::

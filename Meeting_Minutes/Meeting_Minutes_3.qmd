@@ -4,6 +4,9 @@ format: html
 author: "Group 13"
 date: "June 28, 2025"
 date-modified: "last-modified"
+css: styles.css 
+page-layout: full
+include-footer: _footer.qmd
 ---
 
 # ISSS608 Group 13 Meeting Minutes
@@ -87,3 +90,13 @@ The team finalized the structure and key sections of the poster. **The poster wi
 -   **Min Htet Aung**: Responsible for Methodology and Prediction Analysis
 
 The team will collaborate to ensure visual consistency and narrative coherence across sections, with timelines to be set for draft submissions and integration.
+
+::: site-footer-wrapper
+<footer class="site-footer">
+
+Developed as part of the <em>Visual Analytics Application</em> course, MITB \@ SMU, 2025.\
+<strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\
+All rights reserved © 2025.
+
+</footer>
+:::

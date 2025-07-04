@@ -1,0 +1,262 @@
+---
+title: "Sailor and Oceanus Influence"
+author: "Group 13"
+format: 
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+editor: visual
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+---
+
+# 1. The Task
+
+In this take-home exercise, we are required to select one of the module of our proposed Shiny application and complete the following tasks:
+
+- To evaluate and determine the necessary R packages needed for your Shiny application are supported in R CRAN,
+- To prepare and test the specific R codes can be run and returned the correct output as expected,
+- To determine the parameters and outputs that will be exposed on the Shiny applications, and
+- To select the appropriate Shiny UI components for exposing the parameters determine above.
+
+# 2. Project Overview
+
+This project seeks to design and develop insightful visualizations and analytic tools that allow users (like Silas) to explore the musical influence network centered on Sailor Shift. Specifically, we aim to:
+
+- Map Musical Influence: Visualize how Sailor Shift has been influenced by others and, in turn, how she has directly or indirectly influenced artists and genres.
+
+- Analyze Collaborations: Identify key collaborators throughout Sailor's career, both from her early band (Ivy Echoes) and her solo years, and analyze the genres and roles of those collaborators.
+
+- Track Genre Evolution: Understand how Oceanus Folk evolved and interacted with genres like Indie Folk, Indie Pop, and Darkwave through stylized performances, lyrical themes, and musical structure.
+
+- Visualize Career Milestones: Highlight key turning points in Sailor's career, including viral hits, genre shifts, and breakout collaborations using timeline and network-based views.
+
+- Compare Artists' Careers: Contrast the musical journeys of Sailor's former bandmates or contemporaries, and assess what defines a rising star in Oceanus Folk.
+
+- Predict Emerging Stars: Use influence and collaboration patterns to forecast the next potential breakout artists in the Oceanus Folk scene.
+
+# 3. Loading Data and Packages
+
+## 3.1 Loading R Packages
+
+```{r}
+pacman::p_load(
+  # Core packages
+  tidyverse,    # dplyr, ggplot2, tidyr, etc.
+  jsonlite,     # JSON file reading
+  SmartEDA,     # Automated EDA
+  tidygraph,    # Graph manipulation
+  ggraph,       # Network visualization
+  plotly,       # Interactive visualizations
+  treemapify,   # Treemap visualizations
+  visNetwork,   # Interactive network visualization
+  RColorBrewer, # Color palettes
+  DT,           # Interactive tables
+  ggthemes      # Additional ggplot themes
+)
+```
+
+## 3.2 Loading Preprocessed Data from RDS Files
+
+```{r}
+# Load all preprocessed data
+full_graph <- readRDS("data/processed/full_graph.rds")
+nodes_categorized <- readRDS("data/processed/nodes_categorized.rds") 
+edges_categorized <- readRDS("data/processed/edges_categorized.rds")
+artists_profile <- readRDS("data/processed/artists_profile_complete.rds")
+
+# Load special processing components individually
+sailor_id <- readRDS("data/processed/sailor_shift_id.rds")
+influence_types <- readRDS("data/processed/influence_types.rds")
+of_songs <- readRDS("data/processed/oceanus_folk_songs.rds")
+influence_edges <- readRDS("data/processed/influence_edges.rds")
+sailor_edges <- readRDS("data/processed/sailor_influence_edges.rds")
+vis_nodes <- readRDS("data/processed/network_vis_nodes.rds") 
+vis_edges <- readRDS("data/processed/network_vis_edges.rds")
+
+# Load additional supporting data if needed
+people_tbl <- readRDS("data/processed/people_table.rds")
+works_tbl <- readRDS("data/processed/works_table.rds")
+artist_works <- readRDS("data/processed/artist_works.rds")
+cluster_data <- readRDS("data/processed/cluster_analysis_data.rds")
+
+# Verify all loaded successfully
+loaded_objects <- ls()
+cat("Successfully loaded:\n", paste(loaded_objects, collapse="\n "))
+```
+
+# 4. Exploratory Data Analysis
+## 4.1 Count of Edge Types
+
+```{r, out.width="100%", out.height="600px"}
+edges_categorized %>%
+  count(edge_type) %>%
+  ggplot(aes(y = reorder(edge_type, n), x = n)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "Distribution of Edge Types", 
+       x = "Count", 
+       y = "Edge Type") +
+  theme_minimal()
+```
+
+## 4.2 Count of Node Types
+
+```{r, out.width="100%", out.height="600px"}
+nodes_categorized %>%
+  count(node_type) %>%
+  ggplot(aes(y = reorder(node_type, n), x = n)) +
+  geom_col(fill = "tomato") +
+  labs(title = "Distribution of Node Types", 
+       x = "Count", 
+       y = "Node Type") +
+  theme_minimal()
+```
+
+## 4.3 Genre Distribution of Songs
+
+```{r, out.width="100%", out.height="600px"}
+nodes_categorized %>%
+  filter(node_type == "Song") %>%
+  count(genre, sort = TRUE) %>%
+  ggplot(aes(x = reorder(genre, n), y = n)) +
+  geom_bar(stat = "identity", fill = "tomato") +
+  coord_flip() +
+  labs(title = "Count of Songs in each Genre", 
+       x = "Genre", 
+       y = "Count") +
+  theme_minimal()
+```
+
+## 4.4 Temporal Distribution of Oceanus Folk Songs
+
+```{r, out.width="100%", out.height="600px"}
+of_songs %>%
+  filter(!is.na(release_date)) %>%
+  count(release_date) %>%
+  ggplot(aes(x = as.integer(release_date), y = n)) +
+  geom_line(color = "purple") +
+  labs(title = "Release Trend of Oceanus Folk Songs", 
+       x = "Year", 
+       y = "Number of Songs") +
+  theme_minimal()
+```
+
+# 5. Influence Analysis
+## 5.1 Temporal Spread of Influence from Oceanus Folk
+
+```{r}
+# Get influenced songs from Oceanus Folk
+influence_over_time <- influence_edges %>%
+  filter(source %in% of_songs$id) %>%
+  left_join(nodes_categorized, by = c("target" = "id")) %>%
+  filter(node_type == "Song", !is.na(release_date)) %>%
+  mutate(release_year = as.integer(release_date)) %>%
+  count(release_year, name = "influenced_count")
+
+# Create interactive time series plot
+plot_ly(influence_over_time,
+        x = ~release_year,
+        y = ~influenced_count,
+        type = 'scatter',
+        mode = 'lines+markers',
+        line = list(color = 'steelblue'),
+        marker = list(size = 6, color = 'black'),
+        text = ~paste("Year:", release_year, "<br>Influenced Songs:", influenced_count),
+        hoverinfo = 'text') %>%
+  layout(title = "Spread of Oceanus Folk Influence Over Time",
+         xaxis = list(title = "Release Year of Influenced Songs"),
+         yaxis = list(title = "Number of Influenced Songs"),
+         hoverlabel = list(bgcolor = "white"))
+```
+
+## 5.2 Heatmap of Oceanus Folk Influence by Genre and Year
+
+```{r}
+# Prepare heatmap data
+influence_heatmap <- influence_edges %>%
+  filter(source %in% of_songs$id) %>%
+  left_join(nodes_categorized, by = c("target" = "id")) %>%
+  filter(!is.na(release_date), !is.na(genre)) %>%
+  count(release_date, genre) %>%
+  mutate(release_year = as.character(release_date),
+         tooltip = paste("<b>", release_year, "</b>", 
+                         "\nGenre : ", genre,
+                         "\nInfluenced Songs : ", n))
+
+# Create heatmap
+heat <- ggplot(influence_heatmap, aes(x = release_year, y = genre, fill = n)) + 
+  geom_tile(color = "white", size = 1, aes(text = tooltip)) + 
+  theme_tufte(base_family = "Helvetica") + 
+  coord_equal() +
+  scale_fill_gradient(name = "Influenced Songs", low = "#fff2f4", high = "coral") +
+  labs(x = "Release Year", 
+       y = "Genre", 
+       title = "Oceanus Folk Influence by Genre and Year",
+       caption = "Data Source: VAST Challenge 2025 MC1") +
+  theme(axis.ticks = element_blank(),
+        axis.text.x = element_text(size = 8, angle = 90, hjust = 1),
+        axis.text.y = element_text(size = 8),
+        plot.title = element_text(hjust = 0.5, face = "bold"),
+        legend.title = element_text(size = 9),
+        legend.text = element_text(size = 7),
+        legend.position = "top")
+
+# Convert to interactive plot
+ggplotly(heat, tooltip = "text")
+```
+
+# 6. Network Visualizations
+## 6.1 Network Analysis for Genres Influenced by Oceanus Folk
+
+```{r}
+## 6.1 Network Analysis for Genres Influenced by Oceanus Folk
+# Step 1: Filter outward-influenced nodes to songs with known genre
+outward_genre_edges <- influence_edges %>%
+  filter(source %in% of_songs$id) %>%
+  left_join(nodes_categorized, by = c("target" = "id")) %>%
+  filter(node_type == "Song", !is.na(genre)) %>%
+  transmute(from = "Oceanus Folk", to = genre)  # Oceanus Folk → genre
+
+# Step 2: Count influence strength by genre
+outward_genre_strength <- outward_genre_edges %>%
+  count(to, name = "influence_count")
+
+# Step 3: Identify top 5 influenced genres and assign colors
+top5_out_genres <- outward_genre_strength %>%
+  arrange(desc(influence_count)) %>%
+  slice(1:5) %>%
+  mutate(color = rev(RColorBrewer::brewer.pal(5, "Oranges")))
+
+# Step 4: Build nodes for visNetwork
+outward_genre_nodes <- unique(c(outward_genre_edges$from, outward_genre_edges$to)) %>%
+  tibble(id = .) %>%
+  left_join(outward_genre_strength, by = c("id" = "to")) %>%
+  left_join(top5_out_genres %>% select(id = to, top5_color = color), by = "id") %>%
+  mutate(
+    influence_count = replace_na(influence_count, 1),
+    label = id,
+    value = influence_count * 2,
+    color = case_when(
+      id == "Oceanus Folk" ~ "#4682B4",            # Blue for Oceanus Folk
+      !is.na(top5_color) ~ top5_color,             # Top 5 in Oranges palette
+      TRUE ~ "#FDD0A2"                              # Others in light orange
+    ),
+    title = paste0("Genre: ", id, "<br>Influence Count: ", influence_count)
+  )
+
+# Save these for future use
+saveRDS(outward_genre_nodes, "data/processed/outward_genre_nodes.rds")
+saveRDS(outward_genre_edges, "data/processed/outward_genre_edges.rds")
+
+# Render network
+visNetwork(outward_genre_nodes, outward_genre_edges, height = "600px", width = "100%") %>%
+  visEdges(arrows = "to") %>%
+  visOptions(highlightNearest = TRUE) %>%
+  visLayout(randomSeed = 456) %>%
+  visPhysics(enabled = FALSE)
+```
+
+

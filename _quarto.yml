@@ -6,11 +6,7 @@ website:
   navbar:
     left:
       - text: Introduction
-        href: "Project Proposal_Group 13.html"
-      - text: Discovery
-        menu: 
-        - text: Data Wrangling
-          href: data_wrangling.qmd
+        href: "Introduction.html"
       - text: Shiny App
         menu: 
         - text: User Guide 
@@ -18,10 +14,20 @@ website:
         - text: ShinyApp
           href: https://vaa-project-group13.shinyapps.io/Project_Shiny/
       - text: Project Poster 
-        href: "coming Soon"
+        href: "images/Poster_VAA-Group13.jpg"
       - text: Team
-        href: team_intro.qmd
-      - text: 📝 Meeting Minutes
+        href: "team_intro.html"
+      - text: Dicovery
+        menu: 
+        - text: Proposal
+          href: "Prototype/Project Proposal_Group 13.html"
+        - text: Data Preprocessing
+          href: "Prototype/Data Preprocessing.html"
+        - text: Sailor Shift and Oceanus Influence
+          href: "Prototype/Sailor-Oceanus_influence.html"
+        - text: Artists Profile and Future Predictions
+          href: "Prototype/Artists-Future.html"
+      - text: Meeting Minutes
         menu: 
           - text: Meeting Minute 1 
             href: "Meeting_Minutes/Meeting_Minutes_1.html"
