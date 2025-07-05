@@ -3,7 +3,7 @@ title: ""
 page-layout: full                 
 format:
   html:
-    toc: true
+    toc: false 
     toc-location: left
     toc-depth: 2
     code-fold: true
@@ -26,3 +26,14 @@ body{
 
 </style>
 ```
+
+::: {.centered-content}
+## 🎶 Oceanus Folk Influence Explorer
+
+Welcome to the interactive exploration of Oceanus Folk music!  
+This project investigates the genre's evolution, influence networks, and rising stars using advanced network and cluster analysis.
+
+Built as part of the **Visual Analytics Application** course at **MITB SMU, 2025**  
+Developed by **Group 13**: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen  
+All rights reserved.
+:::

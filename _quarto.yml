@@ -14,7 +14,7 @@ website:
         - text: ShinyApp
           href: https://vaa-project-group13.shinyapps.io/Project_Shiny/
       - text: Project Poster 
-        href: "images/Poster_VAA-Group13.jpg"
+        href: "Poster VAA.pdf"
       - text: Team
         href: "team_intro.html"
       - text: Dicovery

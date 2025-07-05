@@ -221,7 +221,7 @@
     "href": "team_intro.html",
     "title": "🎵 Meet the Ensemble: Folk Flow",
     "section": "",
-    "text": "Every great performance begins with harmony.\nFrom three distinct notes came a single chord — and so began our journey through data, rhythm, and discovery.\n\n\n Huang Zi Han\n\n\n Min Tet Aung\n\n\n Ta Nguyen Thao Nguyen\n\n\nWelcome to Folk Flow — where charts hum, graphs groove, and every dataset sings a story.\nWe’re a trio of aspiring visual storytellers from ISSS608: Visual Analytics and Applications, part of the Master of IT in Business programme at Singapore Management University.\nWith a shared love for clarity, rhythm, and design, we compose data narratives that capture not just patterns — but the pulse behind them.\nFrom notes to networks, from melody to meaning — we invite you to explore how visual analytics can turn information into inspiration.\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
+    "text": "Every great performance begins with harmony.\nFrom three distinct notes came a single chord — and so began our journey through data, rhythm, and discovery.\n\n\n  Huang Zihan\n\n\n  Min Htet Aung\n\n\n  Ta Nguyen Thao Nguyen\n\n\nWelcome to Folk Flow — where charts hum, graphs groove, and every dataset sings a story.\nWe’re a trio of aspiring visual storytellers from ISSS608: Visual Analytics and Applications, part of the Master of IT in Business programme at Singapore Management University.\nWith a shared love for clarity, rhythm, and design, we compose data narratives that capture not just patterns — but the pulse behind them.\nFrom notes to networks, from melody to meaning — we invite you to explore how visual analytics can turn information into inspiration.\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
   },
   {
     "objectID": "Prototype/Project Proposal_Group 13.html",
@@ -418,5 +418,19 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "🎶Folk Flow",
+    "section": "",
+    "text": "Welcome to the interactive exploration of Oceanus Folk music!\nThis project investigates the genre’s evolution, influence networks, and rising stars using advanced network and cluster analysis.\nBuilt as part of the Visual Analytics Application course at MITB SMU, 2025\nDeveloped by Group 13: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nAll rights reserved."
+  },
+  {
+    "objectID": "index.html#oceanus-folk-influence-explorer",
+    "href": "index.html#oceanus-folk-influence-explorer",
+    "title": "🎶Folk Flow",
+    "section": "",
+    "text": "Welcome to the interactive exploration of Oceanus Folk music!\nThis project investigates the genre’s evolution, influence networks, and rising stars using advanced network and cluster analysis.\nBuilt as part of the Visual Analytics Application course at MITB SMU, 2025\nDeveloped by Group 13: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nAll rights reserved."
   }
 ]
