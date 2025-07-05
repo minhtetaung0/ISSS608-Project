@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Group 13">
-<meta name="dcterms.date" content="2025-06-26">
+<meta name="dcterms.date" content="2025-07-04">
 
-<title>Meeting Minute 2 – 🎶Folk Flow</title>
+<title>Meeting Minutes 4 – 🎶Folk Flow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Meeting Minute 2</h1>
+<h1 class="title">Meeting Minutes 4</h1>
 </div>
 
 
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 26, 2025</p>
+      <p class="date">July 4, 2025</p>
     </div>
   </div>
   
@@ -214,36 +214,46 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="isss608-group-13-meeting-minutes" class="level1">
 <h1>ISSS608 Group 13 Meeting Minutes</h1>
-<p><strong>Project Meeting 2:</strong> Project Update</p>
-<p><strong>Date:</strong> 26/06/2025</p>
-<p><strong>Time:</strong> 10pm – 10:30pm</p>
-<p><strong>In Attendance:</strong> Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen</p>
-<p><strong>Note Taker:</strong> Ta Nguyen Thao Nguyen</p>
-<hr>
+<p><strong>Project Meeting 4</strong>: Shiny App &amp; Project Website Finalization</p>
+<p><strong>Date</strong>: 04/07/2025</p>
+<p><strong>Time</strong>: 8pm – 9pm</p>
+<p><strong>In Attendance</strong>: Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen</p>
+<p><strong>Note Taker</strong>: Huang Zihan</p>
 <section id="agenda-items" class="level2">
 <h2 class="anchored" data-anchor-id="agenda-items">Agenda Items</h2>
 <ol type="1">
-<li><p>Project Progress Update</p></li>
-<li><p>Project Timeline Update</p></li>
+<li><p>Debugging process of Shiny App</p></li>
+<li><p>Finalizing Project Website</p></li>
 </ol>
-<hr>
+<section id="agenda-item-1-debugging-process-of-shiny-app" class="level3">
+<h3 class="anchored" data-anchor-id="agenda-item-1-debugging-process-of-shiny-app">Agenda Item 1: Debugging process of Shiny App</h3>
+<p><strong>The app crashed when users navigated to the Cluster Analysis page.</strong></p>
+<ul>
+<li><p>Min Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.</p></li>
+<li><p>They traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).</p></li>
+<li><p>The solution involved:</p>
+<ul>
+<li>Removing the dendrogram plot</li>
+<li>Replacing it with alternative visualizations like radar charts and cluster summaries</li>
+</ul></li>
+</ul>
+<p>The team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances.</p>
 </section>
-<section id="agenda-item-1-project-progress-update" class="level2">
-<h2 class="anchored" data-anchor-id="agenda-item-1-project-progress-update">Agenda Item 1: Project Progress Update</h2>
-<p>The team is currently progressing steadily and in alignment with the original project plan. All key milestones, deliverables, and interim checkpoints remain on track, with no major delays or setbacks reported thus far. Weekly check-ins and collaborative tools (such as GitHub, Trello, and group chat channels) have facilitated clear communication and accountability among all members.</p>
-<p>At this stage, our primary area of focus is the development and refinement of the ShinyApp, which functions as the central component of our project. The ShinyApp is critical, as it directly supports multiple interconnected elements of the overall deliverable, including data visualization, user interaction, and report generation. Ensuring this application is stable, intuitive, and fully functional is essential for the success of the final presentation and supporting materials.</p>
-<p>The development process is well underway, with progress being made on both the user interface and server-side logic. The team has been actively collaborating on design choices, UI layout, data preprocessing, and reactive elements to ensure the app meets both user expectations and project requirements. Additional attention is being paid to usability and responsiveness, based on feedback gathered during internal testing.</p>
-<p>Each member is aligned with the shared priorities, and individual responsibilities have been clearly distributed to match both technical strengths and learning goals. For example, one member is focusing on the backend server logic, another on dashboard design, while others are contributing to the data cleaning, documentation, and testing processes. This clear division of labor ensures that contributions are balanced and productive across the team.</p>
-<p>Looking ahead, internal testing and peer feedback will guide improvements to ensure the app is polished before the next milestone.</p>
-</section>
-<section id="agenda-item-2-project-timeline-update" class="level2">
-<h2 class="anchored" data-anchor-id="agenda-item-2-project-timeline-update">Agenda Item 2: Project Timeline Update</h2>
-<p>Following a detailed review of the initial project timeline, the team reached a consensus to revise certain deadlines in order to optimize workflow and reduce last-minute pressure. The most notable change is the advancement of the ShinyApp completion deadline to an earlier date than originally planned.</p>
-<p>This adjustment was made strategically to allow ample time to focus on the Poster and User Guide, two deliverables that benefit from thoughtful planning, editing, and design. By completing the core application earlier, we create a buffer that enables more deliberate work on documentation and presentation materials, reducing the risk of rushed output near the final deadline.</p>
-<p>In preparation for the final presentation, a rehearsal session has also been scheduled. This session will allow the team to practice the flow, timing, and delivery of the presentation, ensuring that all team members are confident in their speaking roles and that the content is well-structured and engaging. Any technical hiccups, inconsistencies, or content gaps identified during the rehearsal will be addressed in advance of the actual presentation day.</p>
-<p>Furthermore, the team reaffirmed each member’s roles and contributions, ensuring clarity on expectations and workloads. This helps prevent overlap, miscommunication, or gaps in task ownership. Progress continues to be monitored weekly, with flexibility built into the timeline to accommodate unexpected challenges or new ideas that may emerge during the development and testing phases.</p>
-<hr>
-<p>In summary, the updated timeline reflects a proactive approach to time management and quality assurance. With a clear roadmap ahead and strong coordination among members, the team is well-positioned to complete all components of the project on time and to a high standard.</p>
+<section id="agenda-item-2-finalizing-project-website" class="level3">
+<h3 class="anchored" data-anchor-id="agenda-item-2-finalizing-project-website">Agenda Item 2: Finalizing Project Website</h3>
+<p><strong>The team met to finalize the project website before submission.</strong></p>
+<p>Key tasks discussed and assigned:</p>
+<ul>
+<li><p>Upload and embed the project posters in the designated section.</p></li>
+<li><p>Revise the Introduction page to clearly explain the project scope, team, and tools used.</p></li>
+<li><p>Finalize the User Guide for the shiny app and upload it onto the website.</p></li>
+<li><p>Update the Discovery section to include:</p>
+<ul>
+<li>Detailed data preparation steps</li>
+<li>Prototype screenshots and descriptions of early designs</li>
+<li>Key iterations and development insights</li>
+</ul></li>
+</ul>
 <div class="site-footer-wrapper">
 <footer class="site-footer">
 <p>Developed as part of the <em>Visual Analytics Application</em> course, MITB @ SMU, 2025.<br>
@@ -253,6 +263,7 @@ All rights reserved © 2025.</p>
 </div>
 
 
+</section>
 </section>
 </section>
 

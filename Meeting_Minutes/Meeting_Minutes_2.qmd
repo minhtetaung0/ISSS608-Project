@@ -2,8 +2,12 @@
 title: "Meeting Minute 2"
 format: html
 author: "Group 13"
+toc: false 
 date: "June 26, 2025"
 date-modified: "last-modified"
+css: styles.css 
+page-layout: full
+include-footer: _footer.qmd
 ---
 
 # ISSS608 Group 13 Meeting Minutes
@@ -54,13 +58,12 @@ Furthermore, the team reaffirmed each member’s roles and contributions, ensuri
 
 In summary, the updated timeline reflects a proactive approach to time management and quality assurance. With a clear roadmap ahead and strong coordination among members, the team is well-positioned to complete all components of the project on time and to a high standard.
 
-
-::: {class="site-footer-wrapper"}
-
+::: site-footer-wrapper
 <footer class="site-footer">
-  Developed as part of the <em>Visual Analytics Application</em> course, MITB @ SMU, 2025.  
-  <strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.  
-  All rights reserved © 2025.
-</footer>
 
+Developed as part of the <em>Visual Analytics Application</em> course, MITB \@ SMU, 2025.\
+<strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\
+All rights reserved © 2025.
+
+</footer>
 :::

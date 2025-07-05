@@ -1,9 +1,10 @@
 ---
 title: "Meeting Minutes 3"
-format: html
 author: "Group 13"
 date: "June 28, 2025"
 date-modified: "last-modified"
+format: html
+toc: false 
 css: styles.css 
 page-layout: full
 include-footer: _footer.qmd

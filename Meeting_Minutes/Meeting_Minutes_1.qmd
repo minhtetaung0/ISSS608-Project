@@ -4,6 +4,9 @@ format: html
 author: "Group 13"
 date: "June 17, 2025"
 date-modified: "last-modified"
+toc: false 
+css: styles.css 
+page-layout: full
 include-footer: _footer.qmd
 ---
 
@@ -95,12 +98,12 @@ The team agreed to follow the project timeline shown in our proposal. The timeli
 
 Each team member is clear on their responsibilities, and the division of work ensures balanced contribution.
 
-::: {class="site-footer-wrapper"}
-
+::: site-footer-wrapper
 <footer class="site-footer">
-  Developed as part of the <em>Visual Analytics Application</em> course, MITB @ SMU, 2025.  
-  <strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.  
-  All rights reserved © 2025.
-</footer>
 
+Developed as part of the <em>Visual Analytics Application</em> course, MITB \@ SMU, 2025.\
+<strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\
+All rights reserved © 2025.
+
+</footer>
 :::

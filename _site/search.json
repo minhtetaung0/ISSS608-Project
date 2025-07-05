@@ -432,5 +432,19 @@
     "title": "🎶Folk Flow",
     "section": "",
     "text": "Welcome to the interactive exploration of Oceanus Folk music!\nThis project investigates the genre’s evolution, influence networks, and rising stars using advanced network and cluster analysis.\nBuilt as part of the Visual Analytics Application course at MITB SMU, 2025\nDeveloped by Group 13: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nAll rights reserved."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_4.html",
+    "href": "Meeting_Minutes/Meeting_Minutes_4.html",
+    "title": "Meeting Minutes 4",
+    "section": "",
+    "text": "Project Meeting 4: Shiny App & Project Website Finalization\nDate: 04/07/2025\nTime: 8pm – 9pm\nIn Attendance: Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen\nNote Taker: Huang Zihan\n\n\n\nDebugging process of Shiny App\nFinalizing Project Website\n\n\n\nThe app crashed when users navigated to the Cluster Analysis page.\n\nMin Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.\nThey traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).\nThe solution involved:\n\nRemoving the dendrogram plot\nReplacing it with alternative visualizations like radar charts and cluster summaries\n\n\nThe team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances.\n\n\n\nThe team met to finalize the project website before submission.\nKey tasks discussed and assigned:\n\nUpload and embed the project posters in the designated section.\nRevise the Introduction page to clearly explain the project scope, team, and tools used.\nFinalize the User Guide for the shiny app and upload it onto the website.\nUpdate the Discovery section to include:\n\nDetailed data preparation steps\nPrototype screenshots and descriptions of early designs\nKey iterations and development insights\n\n\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_4.html#agenda-items",
+    "href": "Meeting_Minutes/Meeting_Minutes_4.html#agenda-items",
+    "title": "Meeting Minutes 4",
+    "section": "",
+    "text": "Debugging process of Shiny App\nFinalizing Project Website\n\n\n\nThe app crashed when users navigated to the Cluster Analysis page.\n\nMin Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.\nThey traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).\nThe solution involved:\n\nRemoving the dendrogram plot\nReplacing it with alternative visualizations like radar charts and cluster summaries\n\n\nThe team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances.\n\n\n\nThe team met to finalize the project website before submission.\nKey tasks discussed and assigned:\n\nUpload and embed the project posters in the designated section.\nRevise the Introduction page to clearly explain the project scope, team, and tools used.\nFinalize the User Guide for the shiny app and upload it onto the website.\nUpdate the Discovery section to include:\n\nDetailed data preparation steps\nPrototype screenshots and descriptions of early designs\nKey iterations and development insights\n\n\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
   }
 ]

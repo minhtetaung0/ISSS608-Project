@@ -1,0 +1,70 @@
+---
+title: "Meeting Minutes 4"
+author: "Group 13"
+date: "July 04, 2025"
+date-modified: "last-modified"
+format: html
+toc: false 
+css: styles.css 
+page-layout: full
+include-footer: _footer.qmd
+---
+# ISSS608 Group 13 Meeting Minutes
+
+**Project Meeting 4**: Shiny App & Project Website Finalization
+
+**Date**: 04/07/2025
+
+**Time**: 8pm – 9pm
+
+**In Attendance**: Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen
+
+**Note Taker**: Huang Zihan
+
+## Agenda Items
+
+1.  Debugging process of Shiny App 
+
+2.  Finalizing Project Website
+
+### Agenda Item 1: Debugging process of Shiny App 
+
+**The app crashed when users navigated to the Cluster Analysis page.**
+
+- Min Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.
+
+- They traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).
+
+- The solution involved:
+  - Removing the dendrogram plot
+  - Replacing it with alternative visualizations like radar charts and cluster summaries
+
+The team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances. 
+
+### Agenda Item 2: Finalizing Project Website
+
+**The team met to finalize the project website before submission.**
+
+Key tasks discussed and assigned:
+
+- Upload and embed the project posters in the designated section.
+
+- Revise the Introduction page to clearly explain the project scope, team, and tools used.
+
+- Finalize the User Guide for the shiny app and upload it onto the website.
+
+- Update the Discovery section to include:
+  - Detailed data preparation steps
+  - Prototype screenshots and descriptions of early designs
+  - Key iterations and development insights
+
+
+::: site-footer-wrapper
+<footer class="site-footer">
+
+Developed as part of the <em>Visual Analytics Application</em> course, MITB \@ SMU, 2025.\
+<strong>Group 13</strong> — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\
+All rights reserved © 2025.
+
+</footer>
+:::
