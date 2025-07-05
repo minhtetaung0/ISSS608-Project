@@ -7,6 +7,20 @@
     "text": "🎶 Folk Flow\nExploring Evolution, Influence, and Emerging Stars in Oceanus Folk Music\nFolk Flow is a data-driven musical research project analyzing how artists and genres interact, transform, and thrive within the Oceanus Folk ecosystem. By using influence graphs, machine learning, and prediction techniques, we dive deep into the genre’s development and the role Sailor Shift played in its transformation.\n\n\nMain Analyses\n\n\nWe developed the Oceanus Folk Influence Explorer, a Shiny dashboard that performs three key types of analysis:\n\n\n\n\n\n\nNetwork Analysis\nMapping direct and indirect influence relationships using graph theory and centrality metrics.\n\n\n\n\n\nCluster Analysis\nGrouping artists by productivity, genre diversity, and collaboration using K-Means, PAM, and DBSCAN.\n\n\n\n\n\nFuture Analysis\nForecasting rising stars using rule-based scores, growth models, and network centrality.\n\n\n\n\nKey Findings\n\n\n\n\n\n\n\n11,358Total Artists\n\n\n\n\n\n\n\n20,976Total Notable Works\n\n\n\n\n\n\n\n0.8 YearsAvg. Time to Notability\n\n\n\n\n\n\n\n223Musical Groups Identified\n\n\n\n\n\n\n\nDream Popis the Most Frequent Genre\n\n\n\n\n\n🎶 Folk Flow Explorer\n\n\nThe Shiny dashboard includes 7 interactive modules with unique visual and analytical capabilities. Below are snapshots of key pages — hover for more details.\n\n\n\n\n\n📊 Overview: Summary KPIs, genre timelines, artist profile table, donut plots, and filters.\n\n\n\n\n\n📈 EDA: Explore node and edge types, genre heatmaps, and song distributions.\n\n\n\n\n\n👩‍🎤 Artist Profiles: Career timelines, ego networks, radar comparisons, and tables.\n\n\n\n\n\n🌐 Influence Network: Explore who Sailor Shift influenced and who influenced Sailor.\n\n\n\n\n\n🎶 Oceanus Folk Influence: Timeline, treemaps, lollipop charts, and genre flow networks.\n\n\n\n\n\n🔀 Cluster Analysis: Cluster proportions, PCA plots, boxplots, and model evaluation.\n\n\n\n\n\n🔮 Prediction Table: Composite Score, Growth Trajectory, and Network Centrality outputs.\n\n\n\n\n\n📏 Metrics: Tiers, scores, radar plots, and metric breakdowns by method.\n\n\n\n\n🚀 Launch the App →\n\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "🎶Folk Flow",
+    "section": "",
+    "text": "Welcome to the interactive exploration of Oceanus Folk music!\nThis project investigates the genre’s evolution, influence networks, and rising stars using advanced network and cluster analysis.\nBuilt as part of the Visual Analytics Application course at MITB SMU, 2025\nDeveloped by Group 13: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nAll rights reserved."
+  },
+  {
+    "objectID": "index.html#oceanus-folk-influence-explorer",
+    "href": "index.html#oceanus-folk-influence-explorer",
+    "title": "🎶Folk Flow",
+    "section": "",
+    "text": "Welcome to the interactive exploration of Oceanus Folk music!\nThis project investigates the genre’s evolution, influence networks, and rising stars using advanced network and cluster analysis.\nBuilt as part of the Visual Analytics Application course at MITB SMU, 2025\nDeveloped by Group 13: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nAll rights reserved."
+  },
+  {
     "objectID": "Prototype/Sailor-Oceanus_influence.html",
     "href": "Prototype/Sailor-Oceanus_influence.html",
     "title": "Sailor and Oceanus Influence",
@@ -187,6 +201,20 @@
     "title": "Meeting Minutes 3",
     "section": "",
     "text": "Review of Shiny App Progress\nSuggestions for Shiny App Improvements\nPoster Preparation and Task Division\n\n\n\nThe team has completed approximately 90% of the Oceanus Folk Influence Explorer Shiny app.\nCompleted modules include:\n\nOverview Page: Introduction and summary of the dataset\nExploratory Data Analysis (EDA): Insights on genre distribution, release timelines, and artist demographics\nArtist Profiles: Detailed career timelines, ego networks, and work histories for individual artists\nSailor Shift’s Influence Analysis: Visualization of how Sailor Shift has influenced other artists and how other artists interact with Sailor Shift.\nCluster Analysis: Identification and visualization of artist clusters with key metrics and interpretation aids\n\nRemaining tasks:\n\nPrediction Analysis Module: Aimed at identifying potential rising stars using rule-based or algorithmic methods\nOceanus Folk Influence Module: Focused on mapping how Oceanus Folk has been influenced by and has influenced other genres and artists over time\n\nThe team will continue working on these final modules to complete the app in preparation for poster presentation and submission.\n\n\n\nThe team identified key areas for enhancement and resolution:\n\nFix the crash in the Cluster Analysis module, which currently causes instability in the app due to rendering or data alignment issues.\nComplete the Oceanus Folk Influence Analysis, focusing on visualizing its genre-level and artist-level interactions over time.\nImplement the Prediction Analysis module, which will identify potential future stars based on artist profiles and relevant metrics.\n\nThese improvements are prioritized for completion before final testing and poster submission to ensure a stable and feature-complete application.\n\n\n\nThe team finalized the structure and key sections of the poster. The poster will include:\n\nIntroduction\nMethodology\nInfluence Analysis\nCluster Analysis\nPrediction Analysis\nConclusion\n\nWork division for content preparation:\n\nTa Nguyen Thao Nguyen: Responsible for the Introduction and Influence Analysis sections\nHuang Zihan: Responsible for Cluster Analysis and Conclusion\nMin Htet Aung: Responsible for Methodology and Prediction Analysis\n\nThe team will collaborate to ensure visual consistency and narrative coherence across sections, with timelines to be set for draft submissions and integration.\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_4.html",
+    "href": "Meeting_Minutes/Meeting_Minutes_4.html",
+    "title": "Meeting Minutes 4",
+    "section": "",
+    "text": "Project Meeting 4: Shiny App & Project Website Finalization\nDate: 04/07/2025\nTime: 8pm – 9pm\nIn Attendance: Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen\nNote Taker: Huang Zihan\n\n\n\nDebugging process of Shiny App\nFinalizing Project Website\n\n\n\nThe app crashed when users navigated to the Cluster Analysis page.\n\nMin Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.\nThey traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).\nThe solution involved:\n\nRemoving the dendrogram plot\nReplacing it with alternative visualizations like radar charts and cluster summaries\n\n\nThe team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances.\n\n\n\nThe team met to finalize the project website before submission.\nKey tasks discussed and assigned:\n\nUpload and embed the project posters in the designated section.\nRevise the Introduction page to clearly explain the project scope, team, and tools used.\nFinalize the User Guide for the shiny app and upload it onto the website.\nUpdate the Discovery section to include:\n\nDetailed data preparation steps\nPrototype screenshots and descriptions of early designs\nKey iterations and development insights\n\n\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
+  },
+  {
+    "objectID": "Meeting_Minutes/Meeting_Minutes_4.html#agenda-items",
+    "href": "Meeting_Minutes/Meeting_Minutes_4.html#agenda-items",
+    "title": "Meeting Minutes 4",
+    "section": "",
+    "text": "Debugging process of Shiny App\nFinalizing Project Website\n\n\n\nThe app crashed when users navigated to the Cluster Analysis page.\n\nMin Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.\nThey traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).\nThe solution involved:\n\nRemoving the dendrogram plot\nReplacing it with alternative visualizations like radar charts and cluster summaries\n\n\nThe team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances.\n\n\n\nThe team met to finalize the project website before submission.\nKey tasks discussed and assigned:\n\nUpload and embed the project posters in the designated section.\nRevise the Introduction page to clearly explain the project scope, team, and tools used.\nFinalize the User Guide for the shiny app and upload it onto the website.\nUpdate the Discovery section to include:\n\nDetailed data preparation steps\nPrototype screenshots and descriptions of early designs\nKey iterations and development insights\n\n\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
   },
   {
     "objectID": "Meeting_Minutes/Meeting_Minutes_2.html",
@@ -418,33 +446,5 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "🎶Folk Flow",
-    "section": "",
-    "text": "Welcome to the interactive exploration of Oceanus Folk music!\nThis project investigates the genre’s evolution, influence networks, and rising stars using advanced network and cluster analysis.\nBuilt as part of the Visual Analytics Application course at MITB SMU, 2025\nDeveloped by Group 13: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nAll rights reserved."
-  },
-  {
-    "objectID": "index.html#oceanus-folk-influence-explorer",
-    "href": "index.html#oceanus-folk-influence-explorer",
-    "title": "🎶Folk Flow",
-    "section": "",
-    "text": "Welcome to the interactive exploration of Oceanus Folk music!\nThis project investigates the genre’s evolution, influence networks, and rising stars using advanced network and cluster analysis.\nBuilt as part of the Visual Analytics Application course at MITB SMU, 2025\nDeveloped by Group 13: Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen\nAll rights reserved."
-  },
-  {
-    "objectID": "Meeting_Minutes/Meeting_Minutes_4.html",
-    "href": "Meeting_Minutes/Meeting_Minutes_4.html",
-    "title": "Meeting Minutes 4",
-    "section": "",
-    "text": "Project Meeting 4: Shiny App & Project Website Finalization\nDate: 04/07/2025\nTime: 8pm – 9pm\nIn Attendance: Huang Zihan, Min Htet Aung, Nguyen Thao Nguyen\nNote Taker: Huang Zihan\n\n\n\nDebugging process of Shiny App\nFinalizing Project Website\n\n\n\nThe app crashed when users navigated to the Cluster Analysis page.\n\nMin Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.\nThey traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).\nThe solution involved:\n\nRemoving the dendrogram plot\nReplacing it with alternative visualizations like radar charts and cluster summaries\n\n\nThe team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances.\n\n\n\nThe team met to finalize the project website before submission.\nKey tasks discussed and assigned:\n\nUpload and embed the project posters in the designated section.\nRevise the Introduction page to clearly explain the project scope, team, and tools used.\nFinalize the User Guide for the shiny app and upload it onto the website.\nUpdate the Discovery section to include:\n\nDetailed data preparation steps\nPrototype screenshots and descriptions of early designs\nKey iterations and development insights\n\n\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
-  },
-  {
-    "objectID": "Meeting_Minutes/Meeting_Minutes_4.html#agenda-items",
-    "href": "Meeting_Minutes/Meeting_Minutes_4.html#agenda-items",
-    "title": "Meeting Minutes 4",
-    "section": "",
-    "text": "Debugging process of Shiny App\nFinalizing Project Website\n\n\n\nThe app crashed when users navigated to the Cluster Analysis page.\n\nMin Htet Aung and Huang Zihan were responsible for identifying and fixing the issue.\nThey traced the error to the use of as.dendrogram() on non-hierarchical clustering output (dbscan).\nThe solution involved:\n\nRemoving the dendrogram plot\nReplacing it with alternative visualizations like radar charts and cluster summaries\n\n\nThe team will continue working on debugging the crashes of the Cluster Analysis Page in the shiny app and make sure it is running smoothly under different circumstances.\n\n\n\nThe team met to finalize the project website before submission.\nKey tasks discussed and assigned:\n\nUpload and embed the project posters in the designated section.\nRevise the Introduction page to clearly explain the project scope, team, and tools used.\nFinalize the User Guide for the shiny app and upload it onto the website.\nUpdate the Discovery section to include:\n\nDetailed data preparation steps\nPrototype screenshots and descriptions of early designs\nKey iterations and development insights\n\n\n\n\nDeveloped as part of the Visual Analytics Application course, MITB @ SMU, 2025.\nGroup 13 — Huang Zihan, Min Htet Aung, Ta Nguyen Thao Nguyen.\nAll rights reserved © 2025."
   }
 ]

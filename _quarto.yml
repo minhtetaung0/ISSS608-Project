@@ -34,7 +34,9 @@ website:
           - text: Meeting Minute 2 
             href: "Meeting_Minutes/Meeting_Minutes_2.html"
           - text: Meeting Minute 3 
-            href: "Meeting_Minutes/Meeting_Minutes_3.html"        
+            href: "Meeting_Minutes/Meeting_Minutes_3.html" 
+          - text: Meeting Minute 4 
+            href: "Meeting_Minutes/Meeting_Minutes_4.html" 
 
 
 format:
