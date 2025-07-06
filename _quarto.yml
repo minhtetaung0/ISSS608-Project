@@ -10,7 +10,7 @@ website:
       - text: Shiny App
         menu: 
         - text: User Guide 
-          href: user_guide.pdf
+          href: "User_Guide.pdf"
         - text: ShinyApp
           href: https://vaa-project-group13.shinyapps.io/Project_Shiny/
       - text: Project Poster 
